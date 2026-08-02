@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Great+Vibes&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 55% 92%;
+    --foreground: 24 38% 16%;
+    --card: 42 60% 95%;
+    --card-foreground: 24 38% 16%;
+    --popover: 42 60% 95%;
+    --popover-foreground: 24 38% 16%;
+    --primary: 0 58% 30%;
+    --primary-foreground: 42 60% 95%;
+    --secondary: 41 45% 86%;
+    --secondary-foreground: 24 38% 16%;
+    --muted: 41 35% 85%;
+    --muted-foreground: 25 20% 40%;
+    --accent: 41 45% 86%;
+    --accent-foreground: 0 58% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 30% 75%;
+    --input: 38 30% 75%;
+    --ring: 40 55% 42%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto; /* Lenis owns scrolling */
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-color: #f7efdb;
+  }
+  ::selection {
+    background: rgba(185, 138, 47, 0.35);
+  }
+}
+
+/* ── Typography helpers ─────────────────────────────── */
+.font-display {
+  font-family: "Marcellus", serif;
+}
+.font-script {
+  font-family: "Great Vibes", cursive;
+}
+.font-body {
+  font-family: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Decorative utilities ───────────────────────────── */
+.text-outline-gold {
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(154, 107, 31, 0.6);
+}
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b98a2f 30%, #d9b36a 50%, #b98a2f 70%, transparent);
+}
+.card-frame {
+  background: rgba(253, 248, 234, 0.82);
+  border: 1px solid rgba(185, 138, 47, 0.45);
+  box-shadow:
+    0 0 0 4px rgba(253, 248, 234, 0.5),
+    0 0 0 5px rgba(185, 138, 47, 0.28),
+    0 18px 40px -18px rgba(90, 52, 12, 0.35);
+  backdrop-filter: blur(2px);
+}
+.gold-num {
+  background: linear-gradient(180deg, #8c2323 0%, #6d1717 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── Keyframes ──────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes sway {
+  from { transform: rotate(-1.4deg); }
+  to { transform: rotate(1.4deg); }
+}
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -8vh, 0) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.9; }
+  50% { transform: translate3d(3.5vw, 46vh, 0) rotate(180deg); }
+  92% { opacity: 0.85; }
+  100% { transform: translate3d(-2vw, 104vh, 0) rotate(340deg); opacity: 0; }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.06); }
+}
+@keyframes scroll-cue {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.anim-sway {
+  transform-origin: top center;
+  animation: sway 7s ease-in-out infinite alternate;
+}
+.anim-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+.anim-glow {
+  animation: glow-pulse 4.5s ease-in-out infinite;
+}
+.anim-scroll-cue {
+  animation: scroll-cue 1.8s ease-out infinite;
+}
