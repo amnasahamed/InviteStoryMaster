@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #1a0f1f;
+  }
+  body {
+    background: #1a0f1f;
+    color: #faf3eb;
+    font-family: "Outfit", "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgba(196, 90, 122, 0.35);
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a0f1f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c45a7a;
+    border-radius: 99px;
+  }
+}
+
+.font-script {
+  font-family: "Great Vibes", cursive;
+}
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes veil-sway {
+  0%,
+  100% {
+    transform: rotate(-0.6deg) translateX(0);
+  }
+  50% {
+    transform: rotate(0.6deg) translateX(2px);
+  }
+}
+
+@keyframes tassel-sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.4deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.015) translateY(-4px);
+  }
+}

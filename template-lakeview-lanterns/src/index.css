@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --dusk-deep: #1a0b24;
+    --dusk-purple: #301934;
+    --dusk-magenta: #8e2856;
+    --glow-gold: #d4af37;
+    --glow-warm: #ffb347;
+  }
+
+  html {
+    background: var(--dusk-deep);
+  }
+
+  body {
+    background: var(--dusk-deep);
+    color: #f7e9d2;
+    font-family: "Outfit", system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a0b24;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8e2856;
+    border-radius: 99px;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: "Great Vibes", cursive;
+  }
+  .font-display {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .text-gold {
+    background: linear-gradient(
+      115deg,
+      #f6e2ae 0%,
+      #d4af37 38%,
+      #f9ecc8 55%,
+      #b8832c 82%,
+      #f2d894 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hairline-gold {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 175, 55, 0.75),
+      transparent
+    );
+  }
+
+  .deck-mask {
+    -webkit-mask-image: linear-gradient(
+      to top,
+      #000 0%,
+      #000 28%,
+      rgba(0, 0, 0, 0.55) 38%,
+      transparent 52%
+    );
+    mask-image: linear-gradient(
+      to top,
+      #000 0%,
+      #000 28%,
+      rgba(0, 0, 0, 0.55) 38%,
+      transparent 52%
+    );
+  }
+
+  .water-shimmer {
+    animation: shimmer-drift 9s ease-in-out infinite alternate;
+  }
+
+  .candle-flicker {
+    animation: candle-flicker 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes shimmer-drift {
+  0% {
+    opacity: 0.25;
+    filter: brightness(1);
+  }
+  100% {
+    opacity: 0.55;
+    filter: brightness(1.08);
+  }
+}
+
+@keyframes candle-flicker {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: blur(8px);
+  }
+  40% {
+    opacity: 0.9;
+    filter: blur(10px);
+  }
+  70% {
+    opacity: 0.7;
+    filter: blur(7px);
+  }
+}
+
+@keyframes lantern-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(14px, -28px, 0) rotate(2deg);
+  }
+  100% {
+    transform: translate3d(-8px, -110vh, 0) rotate(-1deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
