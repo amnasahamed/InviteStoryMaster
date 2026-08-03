@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* ── Royal Ivory & Gold ─────────────────────────────── */
+:root {
+  --ivory: #faf6ee;
+  --ivory-deep: #f3ecdd;
+  --gold: #b8912f;
+  --gold-light: #d9bc66;
+  --gold-dark: #8a6a1f;
+  --ink: #4a3b22;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-serif-display { font-family: 'Playfair Display', serif; }
+.font-script { font-family: 'Great Vibes', cursive; }
+
+/* shimmering gold text */
+.gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    var(--gold-dark) 20%,
+    var(--gold-light) 40%,
+    #f4e3ae 50%,
+    var(--gold-light) 60%,
+    var(--gold-dark) 80%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position: 250% center; }
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* falling petals */
+.petal {
+  position: absolute;
+  top: -6%;
+  border-radius: 60% 40% 60% 40%;
+  background: radial-gradient(circle at 30% 30%, #f7e8c4, var(--gold-light));
+  opacity: 0;
+  animation: petal-fall linear infinite;
+  filter: blur(0.3px);
+}
+@keyframes petal-fall {
+  0%   { transform: translate3d(0, -5vh, 0) rotate(0deg); opacity: 0; }
+  8%   { opacity: 0.85; }
+  90%  { opacity: 0.7; }
+  100% { transform: translate3d(var(--sway, 6vw), 108vh, 0) rotate(560deg); opacity: 0; }
+}
+
+/* slow floating for decorative florals */
+.float-slow { animation: float-slow 7s ease-in-out infinite; }
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-14px) }
+}
+
+/* soft pulsing glow ring on monogram */
+.glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 145, 47, 0.28); }
+  50% { box-shadow: 0 0 42px 8px rgba(184, 145, 47, 0.38); }
+}
+
+/* scroll cue bounce */
+.cue-bounce { animation: cue-bounce 2.2s ease-in-out infinite; }
+@keyframes cue-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.65 }
+  50% { transform: translateY(10px); opacity: 1 }
+}
+
+/* countdown digit tick */
+.digit-pop { animation: digit-pop 0.45s ease; }
+@keyframes digit-pop {
+  0% { transform: scale(1.18); color: var(--gold); }
+  100% { transform: scale(1); }
+}
+
+/* ornamental divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  color: var(--gold);
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  width: 72px;
+  background: linear-gradient(90deg, transparent, var(--gold-light));
+}
+.ornament::after {
+  background: linear-gradient(90deg, var(--gold-light), transparent);
+}
+
+/* thin double gold frame like the card */
+.gold-frame {
+  border: 1px solid rgba(184, 145, 47, 0.55);
+  outline: 1px solid rgba(184, 145, 47, 0.28);
+  outline-offset: 6px;
+}
+
+/* grainy silk texture overlay */
+.silk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(184,145,47,0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
