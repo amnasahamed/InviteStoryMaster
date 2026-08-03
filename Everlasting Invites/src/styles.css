@@ -1,0 +1,270 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/cormorant-garamond/600-italic.css";
+@import "@fontsource/marcellus/400.css";
+@import "@fontsource-variable/karla";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * "Mughal Arch" wedding invitation design system.
+ * Aged ivory paper, blush, antique gold and deep maroon.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Marcellus", "Cormorant Garamond", serif;
+  --font-script: "Cormorant Garamond", serif;
+  --font-body: "Karla Variable", "Karla", system-ui, sans-serif;
+  --font-kicker: "Karla Variable", "Karla", system-ui, sans-serif;
+
+  --color-paper: var(--paper);
+  --color-blush: var(--blush);
+  --color-gold: var(--gold);
+  --color-maroon: var(--maroon);
+  --color-leaf: var(--leaf);
+  --color-ink: var(--ink);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Brand palette */
+  --paper: oklch(0.977 0.016 84);
+  --blush: oklch(0.899 0.035 62);
+  --gold: oklch(0.735 0.113 88);
+  --maroon: oklch(0.395 0.132 21);
+  --leaf: oklch(0.5 0.055 143);
+  --ink: oklch(0.33 0.035 40);
+
+  --shadow-gold: oklch(0.735 0.113 88 / 45%);
+  --petal-rose: oklch(0.82 0.075 20);
+  --petal-blush: oklch(0.9 0.04 40);
+  --petal-marigold: oklch(0.79 0.14 70);
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: oklch(0.99 0.01 84);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.99 0.01 84);
+  --popover-foreground: var(--ink);
+  --primary: var(--maroon);
+  --primary-foreground: var(--paper);
+  --secondary: var(--blush);
+  --secondary-foreground: var(--maroon);
+  --muted: oklch(0.945 0.02 76);
+  --muted-foreground: oklch(0.53 0.03 45);
+  --accent: var(--gold);
+  --accent-foreground: var(--maroon);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.735 0.113 88 / 30%);
+  --input: oklch(0.735 0.113 88 / 35%);
+  --ring: var(--gold);
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--maroon);
+  --sidebar-primary-foreground: var(--paper);
+  --sidebar-accent: var(--blush);
+  --sidebar-accent-foreground: var(--maroon);
+  --sidebar-border: oklch(0.735 0.113 88 / 30%);
+  --sidebar-ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Warm handmade-paper ground with a faint gold sheen */
+@utility paper-bg {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(
+      ellipse 70% 45% at 50% 0%,
+      color-mix(in oklab, var(--gold) 16%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 10% 40%,
+      color-mix(in oklab, var(--blush) 45%, transparent),
+      transparent 65%
+    ),
+    url("./assets/paper.jpg");
+  background-size:
+    100% 100%,
+    100% 100%,
+    420px 420px;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+/* Mughal cusped-arch card */
+@utility arch-frame {
+  background: color-mix(in oklab, var(--paper) 82%, transparent);
+  border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+  border-radius: 48% 48% var(--radius) var(--radius) / 34% 34% var(--radius) var(--radius);
+  box-shadow:
+    0 30px 70px -50px var(--shadow-gold),
+    inset 0 0 0 1px color-mix(in oklab, var(--gold) 18%, transparent);
+  backdrop-filter: blur(2px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid color-mix(in oklab, var(--gold) 32%, transparent);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
+
+@utility btn-gold {
+  border-radius: 999px;
+  font-family: var(--font-kicker);
+  letter-spacing: 0.06em;
+  color: var(--paper);
+  background: linear-gradient(
+    100deg,
+    color-mix(in oklab, var(--maroon) 92%, black),
+    var(--maroon) 45%,
+    color-mix(in oklab, var(--gold) 62%, var(--maroon))
+  );
+  background-size: 180% 100%;
+  box-shadow: 0 14px 32px -20px var(--shadow-gold);
+  transition:
+    background-position 0.6s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background-position: 100% 0;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility btn-outline {
+  border-radius: 999px;
+  font-family: var(--font-kicker);
+  letter-spacing: 0.06em;
+  color: var(--maroon);
+  border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+  background: color-mix(in oklab, var(--paper) 75%, transparent);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: color-mix(in oklab, var(--blush) 55%, transparent);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility scroll-strip {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility petal {
+  position: absolute;
+  top: -6%;
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@utility lantern-sway {
+  animation: lantern-swing 5.5s ease-in-out infinite;
+}
+
+@utility lantern-sway-slow {
+  animation: lantern-swing 7.5s ease-in-out infinite;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(var(--petal-drift, 40px), 110vh, 0) rotate(420deg);
+  }
+}
+
+@keyframes lantern-swing {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .petal,
+  .lantern-sway,
+  .lantern-sway-slow {
+    animation: none !important;
+  }
+}

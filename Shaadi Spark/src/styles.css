@@ -1,0 +1,230 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Wedding palette */
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-pine: var(--pine);
+  --color-parchment: var(--parchment);
+  --color-parchment-deep: var(--parchment-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-lotus: var(--lotus);
+  --color-ink: var(--ink);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --sage: oklch(0.74 0.032 165);
+  --sage-deep: oklch(0.6 0.04 168);
+  --pine: oklch(0.42 0.042 168);
+  --parchment: oklch(0.958 0.018 88);
+  --parchment-deep: oklch(0.915 0.028 86);
+  --gold: oklch(0.72 0.092 85);
+  --gold-soft: oklch(0.84 0.06 88);
+  --lotus: oklch(0.74 0.088 8);
+  --ink: oklch(0.34 0.028 62);
+
+  --background: var(--parchment);
+  --foreground: var(--ink);
+  --card: var(--parchment);
+  --card-foreground: var(--ink);
+  --popover: var(--parchment);
+  --popover-foreground: var(--ink);
+  --primary: var(--pine);
+  --primary-foreground: var(--parchment);
+  --secondary: var(--parchment-deep);
+  --secondary-foreground: var(--ink);
+  --muted: var(--parchment-deep);
+  --muted-foreground: oklch(0.52 0.03 70);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.28 0.03 70);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.82 0.05 86);
+  --input: oklch(0.82 0.05 86);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Gold hairline divider with a diamond at the centre */
+@utility gold-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-gold) 80%,
+    transparent
+  );
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    translate: -50% -50%;
+    rotate: 45deg;
+    background: var(--color-gold);
+  }
+}
+
+/* Scalloped mughal arch silhouette */
+@utility mehrab {
+  border-radius: 48% 48% 6px 6px / 34% 34% 4px 4px;
+}
+
+@utility paper-grain {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: radial-gradient(
+        circle at 20% 30%,
+        color-mix(in oklab, var(--color-ink) 6%, transparent),
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        color-mix(in oklab, var(--color-ink) 5%, transparent),
+        transparent 50%
+      );
+  }
+}
+
+@utility gold-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-gold) 0%,
+    var(--color-gold-soft) 45%,
+    var(--color-gold) 60%
+  );
+  background-size: 250% 100%;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 160% 0;
+  }
+  100% {
+    background-position: -60% 0;
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@utility petal {
+  animation: petal-fall var(--dur, 18s) linear var(--delay, 0s) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
