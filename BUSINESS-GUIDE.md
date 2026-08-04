@@ -230,13 +230,11 @@ Every template already has `base: './'` set in its `vite.config.ts` so the build
 
 ---
 
-## 7. Pricing Tier Guide (suggested)
+## 7. Pricing
 
-| Tier | Price | Templates | What the customer gets |
-|---|---|---|---|
-| Classic | ₹999 | Sage Parchment, Marigold Bhavan, Kalyana Mandapam | Names, date, muhurtham, venue, countdown, maps |
-| Signature | ₹1,999 | Royal Reception, Noor-e-Zahra, Kerala Sands, Shubha Vivaham, Toran Telugu, Tamil Thirumana, Emerald Nikah, Meadow Nikah, Midnight Stargaze, Ghibli Portrait, Lake Pichola Royal, Ivory Waltz | + Custom domain on request, faster 24-hour turnaround, photo swap |
-| Royale | ₹2,999 | Rajwada Royale, Rajmahal Palace, Ghibli Selfie, Grand Line Voyage | + Priority WhatsApp support, hand-edited photo edits, premium intro animation |
+**₹1,999 / $20 per template** — flat one-time fee for any template.
+
+What the customer gets: names, date, muhurtham, venue maps, countdown, Add-to-Calendar, photo swap, live shareable link within 24 hours. No subscription.
 
 Sell the WhatsApp preview + Add-to-Calendar as the differentiator — free Canva invites can't do either.
 
