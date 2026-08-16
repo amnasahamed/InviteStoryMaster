@@ -35,9 +35,6 @@ export function FooterBlessing() {
         <p className="mt-10 font-sans text-[0.55rem] tracking-[0.36em] text-paper/40 uppercase">
           {invite.blessing}
         </p>
-        <p className="mt-3 font-sans text-[0.5rem] tracking-[0.3em] text-paper/30 uppercase">
-          invitation by {invite.brand}
-        </p>
       </div>
             <a
           href="https://www.instagram.com/invitestory.in/"

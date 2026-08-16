@@ -14,7 +14,6 @@ export type InviteEvent = {
 };
 
 export type InviteConfig = {
-  brand: string;
   bride: string;
   groom: string;
   /** order the names appear */
@@ -45,70 +44,69 @@ export type InviteConfig = {
 };
 
 export const invite: InviteConfig = {
-  brand: "Black Myth Studio",
-  bride: "Tarunika",
-  groom: "Abbhi",
-  coupleLine: ["Abbhi", "Tarunika"],
-  hashtag: "#AbbhiWedsTarunika",
+  bride: "Samyuktha",
+  groom: "Aditya",
+  coupleLine: ["Aditya", "Samyuktha"],
+  hashtag: "#AdityaWedsSamyuktha",
   intro: "Together with their families",
-  weddingISO: "2026-11-22T06:30:00+05:30",
+  weddingISO: "2026-12-13T09:15:00+05:30",
   dateLabel: {
     day: "Sunday",
-    number: "22",
-    monthYear: "November 2026",
-    time: "6:30 AM",
+    number: "13",
+    monthYear: "December 2026",
+    time: "9:15 AM",
   },
-  city: "Coimbatore",
+  city: "Hyderabad",
   venue: {
-    name: "Sri Thirumana Mahal",
-    address: "Avinashi Road, Peelamedu, Coimbatore, Tamil Nadu 641004",
-    lat: 11.0234,
-    lng: 77.0035,
-    mapQuery: "Sri Thirumana Mahal, Avinashi Road, Peelamedu, Coimbatore",
+    name: "Sri Venkateswara Kalyana Vedika",
+    address: "Financial District, Gachibowli, Hyderabad, Telangana 500032",
+    lat: 17.4156,
+    lng: 78.3428,
+    mapQuery: "Sri Venkateswara Kalyana Vedika, Financial District, Gachibowli, Hyderabad",
   },
-    events: [
+  events: [
     {
       id: "muhurtham",
       name: "Muhurtham",
-      tamil: "முகூர்த்தம்",
-      description: "The knot is tied as the lamps are lit at dawn.",
-      start: "2026-11-22T06:30:00+05:30",
-      end: "2026-11-22T10:00:00+05:30",
-      venue: "Sri Thirumana Mahal",
-      address: "Avinashi Road, Peelamedu, Coimbatore",
+      tamil: "ముహూర్తం",
+      description: "The auspicious knot is tied amidst Vedic chants as dawn turns to morning.",
+      start: "2026-12-13T09:15:00+05:30",
+      end: "2026-12-13T12:30:00+05:30",
+      venue: "Sri Venkateswara Kalyana Vedika",
+      address: "Financial District, Gachibowli, Hyderabad",
       dressCode: "Traditional Silks",
       dressColor: "#c9922f",
     },
   ],
   story: [
     {
-      year: "2019",
-      title: "A queue at Annapoorna",
-      text: "Two strangers argued about which filter coffee in Coimbatore is the real one. Neither of them won.",
+      year: "2020",
+      title: "The Coffee Conversation",
+      text: "An impromptu conversation that started with favorite books and lasted until the cafe closed.",
     },
     {
-      year: "2021",
-      title: "Ooty, in the rain",
-      text: "One umbrella, four hours of conversation, and a decision neither of them said out loud.",
+      year: "2022",
+      title: "Road Trips & Rain",
+      text: "Countless road trips, shared songs, and knowing home was wherever they were together.",
     },
     {
-      year: "2024",
-      title: "The temple steps",
-      text: "He asked. She had already said yes, three years earlier, somewhere in the rain.",
+      year: "2025",
+      title: "The Forever Promise",
+      text: "Under the sunset by the lake, he asked the question she had known the answer to all along.",
     },
     {
       year: "2026",
-      title: "You are invited",
-      text: "With the blessings of our families, we begin our life together at dawn.",
+      title: "Our New Beginning",
+      text: "With the blessings and love of our families, we begin our lifetime together.",
     },
   ],
   blessing: "Celebration · Tradition · Togetherness",
   families: [
-    { side: "Son of", names: "Mr. Ramanathan & Mrs. Lakshmi" },
-    { side: "Daughter of", names: "Mr. Sundaram & Mrs. Meenakshi" },
+    { side: "Son of", names: "Mr. Venkata Ramana & Mrs. Sunitha" },
+    { side: "Daughter of", names: "Mr. Satyanarayana & Mrs. Padmavathi" },
   ],
   contacts: [
-    { name: "Karthik", role: "Groom's side", phone: "+919876543210" },
-    { name: "Divya", role: "Bride's side", phone: "+919876543211" },
+    { name: "Nikhil", role: "Groom's side", phone: "+919876543210" },
+    { name: "Shreya", role: "Bride's side", phone: "+919876543211" },
   ],
 };

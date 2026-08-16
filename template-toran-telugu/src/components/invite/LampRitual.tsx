@@ -240,7 +240,7 @@ export function LampRitual() {
         }}
         aria-hidden={!lit}
       >
-        <p className="font-script text-3xl text-brass">Deepam ஏற்றியாச்சு</p>
+        <p className="font-serif text-2xl text-brass">దీపం వెలిగింది</p>
         <p className="mt-3 font-serif text-lg text-paper/85 italic">
           The lamp is lit. May {invite.coupleLine[0]} &amp; {invite.coupleLine[1]} walk into a life
           as warm as this flame.
