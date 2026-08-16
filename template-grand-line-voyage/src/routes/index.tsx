@@ -4,6 +4,7 @@ import Countdown from "@/components/wedding/Countdown";
 import Couple from "@/components/wedding/Couple";
 import EventDetails from "@/components/wedding/EventDetails";
 import Footer from "@/components/wedding/Footer";
+import CelebrationDock from "@/components/wedding/CelebrationDock";
 import { wedding } from "@/lib/wedding-config";
 
 const title = `${wedding.bride.name} & ${wedding.groom.name} — The Grand Line of Marriage`;
@@ -51,6 +52,8 @@ function Index() {
       <Couple />
       <EventDetails />
       <Footer />
+      <CelebrationDock />
     </main>
   );
 }
+

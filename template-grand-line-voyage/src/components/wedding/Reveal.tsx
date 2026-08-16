@@ -43,20 +43,20 @@ export function SectionTitle({
 }) {
   return (
     <Reveal className={className}>
-      <h2 className="font-display gold-text text-center text-[1.65rem] leading-[1.15] tracking-tight uppercase sm:text-4xl">
+      <h2 className="font-display gold-text text-center text-[1.85rem] leading-[1.12] tracking-tight uppercase sm:text-4xl drop-shadow-[0_4px_16px_rgba(245,197,66,0.25)]">
         {children}
       </h2>
-      <div className="mx-auto mt-4 flex items-center justify-center gap-2">
-        <span className="h-px w-10 bg-gold/60" />
+      <div className="mx-auto mt-3.5 flex items-center justify-center gap-3">
+        <span className="h-[1.5px] w-12 bg-gradient-to-r from-transparent via-gold to-gold/80 rounded-full" />
         <img
           src="/op-coin.png"
           alt=""
           width={24}
           height={24}
           loading="lazy"
-          className="h-5 w-5 animate-[spin_6s_linear_infinite]"
+          className="h-5 w-5 animate-[spin_6s_linear_infinite] drop-shadow-[0_0_8px_rgba(245,197,66,0.6)]"
         />
-        <span className="h-px w-10 bg-gold/60" />
+        <span className="h-[1.5px] w-12 bg-gradient-to-l from-transparent via-gold to-gold/80 rounded-full" />
       </div>
     </Reveal>
   );

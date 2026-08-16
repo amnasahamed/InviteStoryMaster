@@ -37,6 +37,12 @@ function toIcsStamp(date: Date) {
   return date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
 }
 
+export const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+  `${wedding.bride.name} & ${wedding.groom.name} — The Grand Line of Marriage`,
+)}&dates=20270214T140000Z/20270214T200000Z&details=${encodeURIComponent(
+  "Set your Log Pose! An Indian Wedding Adventure awaits in Goa. #TheGrandLineOfMarriage",
+)}&location=${encodeURIComponent(`${wedding.venue.name}, ${wedding.venue.address}`)}`;
+
 export function buildIcs() {
   const start = new Date(wedding.date);
   const end = new Date(start.getTime() + 6 * 60 * 60 * 1000);
