@@ -77,11 +77,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#F5EFE2" },
-      { title: "Wedding Invitation" },
-      { name: "description", content: "A digital Indian wedding invitation." },
+      { title: "Surya & Jayesh — Engagement Invitation" },
+      { name: "description", content: "A digital engagement invitation for Surya & Jayesh." },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Surya & Jayesh — Engagement Invitation" },
+      {
+        property: "og:description",
+        content:
+          "Surya and Jayesh cordially invite you to celebrate their engagement on September 4, 2026 at SN Auditorium Olari, Thrissur, Kerala.",
+      },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:alt", content: "Surya & Jayesh Engagement Invitation" },
+      { property: "og:url", content: "/" },
+      { property: "og:site_name", content: "Surya & Jayesh Engagement" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Surya & Jayesh — Engagement Invitation" },
+      {
+        name: "twitter:description",
+        content:
+          "Surya and Jayesh cordially invite you to celebrate their engagement on September 4, 2026 at SN Auditorium Olari, Thrissur, Kerala.",
+      },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
       {
@@ -101,7 +117,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

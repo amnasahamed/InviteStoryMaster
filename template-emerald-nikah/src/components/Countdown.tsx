@@ -15,7 +15,9 @@ function Unit({ value, label }: { value: number; label: string }) {
   const text = String(value).padStart(2, "0");
   return (
     <div className="relative flex flex-col items-center">
-      <div className="glass-tile grid h-[4.5rem] w-[4.5rem] place-items-center overflow-hidden sm:h-24 sm:w-24">
+      <div className="glass-tile-interactive relative grid h-[4.75rem] w-[4.75rem] place-items-center overflow-hidden border border-gold/40 shadow-[0_8px_25px_rgba(0,0,0,0.4)] sm:h-24 sm:w-24">
+        {/* Subtle top gold highlight */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent" />
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.span
             key={text}
@@ -23,13 +25,13 @@ function Unit({ value, label }: { value: number; label: string }) {
             animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
             exit={{ y: "-60%", opacity: 0, filter: "blur(6px)" }}
             transition={{ type: "spring", stiffness: 340, damping: 30 }}
-            className="font-display text-3xl tabular-nums text-gold sm:text-4xl"
+            className="font-display text-3xl font-semibold tabular-nums text-gold sm:text-4xl drop-shadow-[0_2px_8px_rgba(230,195,110,0.3)]"
           >
             {text}
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="mt-2 text-[0.62rem] uppercase tracking-[0.28em] text-cream/60">
+      <span className="mt-2 text-[0.62rem] font-medium uppercase tracking-[0.28em] text-cream/70">
         {label}
       </span>
     </div>

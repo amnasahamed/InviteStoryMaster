@@ -1,8 +1,7 @@
 import { CalendarPlus, Clock, MapPin, Shirt } from "lucide-react";
-import { toast } from "sonner";
 import jaali from "@/assets/jaali.jpg";
 import { invitation } from "@/config/invitation";
-import { directionsUrl, downloadICS, googleCalendarUrl } from "@/lib/wedding";
+import { directionsUrl, googleCalendarUrl } from "@/lib/wedding";
 import { Reveal } from "./Reveal";
 
 export function Details() {
@@ -21,7 +20,7 @@ export function Details() {
         <div className="relative rounded-t-[9rem] border border-gold/50 bg-parchment px-7 pt-16 pb-10 text-center shadow-[0_30px_60px_-45px_var(--color-ink)] paper-grain">
           <div className="pointer-events-none absolute inset-x-3 top-3 bottom-3 rounded-t-[8.4rem] border border-gold/30" />
 
-          <p className="text-[0.62rem] tracking-[0.4em] text-ink/60 uppercase">The wedding</p>
+          <p className="text-[0.62rem] tracking-[0.4em] text-ink/60 uppercase">The Engagement</p>
           <p className="mt-4 font-display text-4xl tracking-[0.12em] text-gold">
             {event.dateLabel}
           </p>
@@ -49,35 +48,23 @@ export function Details() {
           <p className="mt-6 font-display text-lg italic text-ink/65">{event.note}</p>
 
           <div className="mt-8 flex flex-col gap-3">
-            <button
-              type="button"
-              onClick={() => {
-                downloadICS();
-                toast.success("Invitation saved to your calendar file");
-              }}
+            <a
+              href={googleCalendarUrl()}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-pine px-6 py-3.5 text-[0.7rem] tracking-[0.24em] text-parchment uppercase transition-transform duration-200 active:scale-95"
             >
               <CalendarPlus className="size-4 transition-transform group-hover:rotate-6" />
               Add to calendar
-            </button>
-            <div className="flex gap-3">
-              <a
-                href={googleCalendarUrl()}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 rounded-full border border-gold/60 py-3 text-[0.65rem] tracking-[0.2em] text-ink/75 uppercase transition-colors hover:bg-gold/10"
-              >
-                Google
-              </a>
-              <a
-                href={directionsUrl()}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 rounded-full border border-gold/60 py-3 text-[0.65rem] tracking-[0.2em] text-ink/75 uppercase transition-colors hover:bg-gold/10"
-              >
-                Directions
-              </a>
-            </div>
+            </a>
+            <a
+              href={directionsUrl()}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-gold/60 py-3 text-[0.65rem] tracking-[0.2em] text-ink/75 uppercase transition-colors hover:bg-gold/10"
+            >
+              Directions
+            </a>
           </div>
         </div>
       </Reveal>

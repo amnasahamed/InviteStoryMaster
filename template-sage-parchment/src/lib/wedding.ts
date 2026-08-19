@@ -3,7 +3,10 @@ import { invitation } from "@/config/invitation";
 const { event, venue } = invitation;
 
 function toICSDate(iso: string) {
-  return new Date(iso).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  return new Date(iso)
+    .toISOString()
+    .replace(/[-:]/g, "")
+    .replace(/\.\d{3}/, "");
 }
 
 export function buildICS() {
@@ -36,23 +39,28 @@ export function downloadICS() {
 }
 
 export function googleCalendarUrl() {
+  const details = `${invitation.invite.kicker} — ${invitation.invite.line}\n\nVenue: ${venue.name}, ${venue.address}\nDress code: ${event.dressCode}\nNote: ${event.note}`;
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: event.title,
     dates: `${toICSDate(event.startsAt)}/${toICSDate(event.endsAt)}`,
-    details: invitation.invite.line,
+    details,
     location: `${venue.name}, ${venue.address}`,
   });
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
 export function mapsUrl() {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    venue.mapsQuery,
-  )}`;
+  if ("url" in venue && venue.url) {
+    return venue.url;
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.mapsQuery)}`;
 }
 
 export function directionsUrl() {
+  if ("url" in venue && venue.url) {
+    return venue.url;
+  }
   return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
 }
 

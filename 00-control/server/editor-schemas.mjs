@@ -674,6 +674,77 @@ export const EDITOR_SCHEMAS = {
       fields: venueCore,
     },
   ],
+
+  "lotus-barge": [
+    {
+      id: "hero",
+      label: "Moonlit opening",
+      description: "Couple identity and copy used by the two-tap opening journey.",
+      alwaysOn: true,
+      kind: "fields",
+      fields: [
+        ...coupleFields,
+        { path: "meta.hashtag", label: "Hashtag" },
+        { path: "meta.monogram", label: "Monogram" },
+        { path: "copy.intro", label: "Opening eyebrow" },
+        { path: "copy.tagline", label: "Opening title", type: "textarea" },
+        { path: "copy.invitationNote", label: "Invitation message", type: "textarea" },
+        { path: "copy.verseHindi", label: "Blessing heading" },
+        { path: "copy.verseText", label: "Family welcome", type: "textarea" },
+      ],
+      mediaSlotIds: ["intro-poster", "intro-end", "intro-video"],
+    },
+    {
+      id: "scene",
+      label: "Lotus barge scene",
+      alwaysOn: true,
+      kind: "media",
+      mediaSlotIds: [
+        "sky",
+        "water-palace",
+        "barge",
+        "couple",
+        "mandap",
+        "foreground-lotus",
+        "floating-petals",
+        "diya",
+        "ornamental-frame",
+        "social-card",
+      ],
+    },
+    {
+      id: "countdown",
+      label: "Countdown",
+      toggleKey: "countdown",
+      kind: "fields",
+      fields: timingCore,
+    },
+    {
+      id: "events",
+      label: "Wedding",
+      description: "This template supports one Wedding event only.",
+      toggleKey: "events",
+      kind: "fields",
+      fields: [
+        ...timingCore,
+        { path: "events.0.note", label: "Wedding note", type: "textarea" },
+      ],
+    },
+    {
+      id: "venue",
+      label: "Venue and directions",
+      toggleKey: "venue",
+      kind: "fields",
+      fields: venueCore,
+    },
+    {
+      id: "footer",
+      label: "Closing",
+      alwaysOn: true,
+      kind: "fields",
+      fields: [{ path: "copy.closing", label: "Closing line", type: "textarea" }],
+    },
+  ],
 };
 
 // Aliases sharing the same page structure

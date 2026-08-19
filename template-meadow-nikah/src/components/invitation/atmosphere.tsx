@@ -82,10 +82,7 @@ export function Reveal({
 /** Small hand-drawn style floral divider. */
 export function FloralDivider({ className = "" }: { className?: string }) {
   return (
-    <div
-      aria-hidden
-      className={`flex items-center justify-center gap-3 text-gold ${className}`}
-    >
+    <div aria-hidden className={`flex items-center justify-center gap-3 text-gold ${className}`}>
       <span className="h-px w-14 bg-gradient-to-r from-transparent to-gold/60" />
       <svg width="34" height="20" viewBox="0 0 34 20" fill="none">
         <path
@@ -132,10 +129,7 @@ export function Arabesque({
 /** Ornate gold corner brackets for framed sections. */
 export function Corners({ className = "" }: { className?: string }) {
   const corner = (extra: string) => (
-    <span
-      aria-hidden
-      className={`pointer-events-none absolute h-6 w-6 border-gold/45 ${extra}`}
-    />
+    <span aria-hidden className={`pointer-events-none absolute h-6 w-6 border-gold/45 ${extra}`} />
   );
   return (
     <span aria-hidden className={`pointer-events-none absolute inset-0 ${className}`}>

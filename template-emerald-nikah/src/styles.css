@@ -134,41 +134,68 @@
 
 /* ---------- Wedding invitation design system ---------- */
 :root {
-  --ink: oklch(0.28 0.05 45);
-  --emerald-deep: oklch(0.22 0.06 168);
-  --emerald: oklch(0.32 0.08 168);
-  --gold: oklch(0.82 0.13 87);
-  --gold-soft: oklch(0.9 0.08 88);
-  --cream: oklch(0.95 0.02 85);
-  --rose: oklch(0.78 0.09 18);
-  --rose-deep: oklch(0.45 0.13 20);
+  --ink: oklch(0.25 0.05 45);
+  --emerald-deep: #072219;
+  --emerald-rich: #0d3627;
+  --emerald-card: rgba(10, 42, 32, 0.72);
+  --emerald-glow: rgba(22, 90, 68, 0.35);
+  --gold: #e5c178;
+  --gold-soft: #f7e6b8;
+  --gold-bright: #fff2c8;
+  --gold-dark: #b2883b;
+  --cream: #faf5eb;
+  --cream-soft: #ede4d1;
+  --rose: #cf7c89;
+  --rose-deep: #7a2335;
+  
   --gradient-gold: linear-gradient(
-    100deg,
-    oklch(0.72 0.11 70),
-    oklch(0.93 0.09 95),
-    oklch(0.78 0.12 55),
-    oklch(0.95 0.05 100)
+    135deg,
+    #cf9e46 0%,
+    #fae5ab 25%,
+    #edd080 50%,
+    #fff6db 75%,
+    #b8842e 100%
+  );
+  --gradient-gold-foil: linear-gradient(
+    90deg,
+    #c4943f 0%,
+    #fcedb8 30%,
+    #e5bd6a 50%,
+    #fff9e6 70%,
+    #b8822d 100%
+  );
+  --gradient-card-gold: linear-gradient(
+    145deg,
+    rgba(229, 193, 120, 0.15) 0%,
+    rgba(10, 42, 32, 0.85) 40%,
+    rgba(7, 34, 25, 0.95) 100%
   );
   --gradient-veil: linear-gradient(
     to bottom,
-    oklch(0.18 0.05 168 / 0.85),
-    oklch(0.2 0.06 168 / 0.55),
-    oklch(0.16 0.05 168 / 0.92)
+    rgba(5, 24, 17, 0.92) 0%,
+    rgba(7, 34, 25, 0.6) 45%,
+    rgba(5, 22, 16, 0.98) 100%
   );
-  --shadow-lux: 0 30px 70px -30px oklch(0.15 0.05 168 / 0.85);
+  --shadow-lux: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
+  --shadow-gold-glow: 0 0 35px rgba(229, 193, 120, 0.28);
 }
 
 @theme inline {
   --color-ink: var(--ink);
   --color-emerald-deep: var(--emerald-deep);
-  --color-emerald: var(--emerald);
+  --color-emerald-rich: var(--emerald-rich);
+  --color-emerald-card: var(--emerald-card);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-dark: var(--gold-dark);
   --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
   --color-rose: var(--rose);
   --color-rose-deep: var(--rose-deep);
   --font-display: "Cormorant Garamond", serif;
-  --font-script: "Great Vibes", cursive;
+  --font-royal: "Cinzel Decorative", serif;
+  --font-script: "Pinyon Script", "Great Vibes", cursive;
   --font-body: "Jost", sans-serif;
   --font-arabic: "Amiri", serif;
 }
@@ -178,11 +205,16 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--emerald-deep);
     color: var(--cream);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
@@ -192,17 +224,54 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 7s ease-in-out infinite;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@utility text-gradient-gold-bright {
+  background: linear-gradient(135deg, #fff7de 0%, #f5d68b 50%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @utility glass-tile {
-  border-radius: 1rem;
-  border: 1px solid oklch(0.82 0.13 87 / 0.28);
-  background: oklch(0.25 0.05 168 / 0.55);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(229, 193, 120, 0.28);
+  background: var(--gradient-card-gold);
   box-shadow:
-    inset 0 1px 0 oklch(1 0 0 / 0.08),
-    var(--shadow-lux);
-  backdrop-filter: blur(10px);
+    inset 0 1px 1px rgba(255, 245, 215, 0.2),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+    0 25px 60px -15px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@utility glass-tile-interactive {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(229, 193, 120, 0.28);
+  background: var(--gradient-card-gold);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 245, 215, 0.2),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+    0 25px 60px -15px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba(245, 215, 145, 0.55);
+    transform: translateY(-3px);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 245, 215, 0.35),
+      0 0 35px rgba(229, 193, 120, 0.25),
+      0 30px 65px -15px rgba(0, 0, 0, 0.9);
+  }
+}
+
+@utility gold-border-arch {
+  border: 1px solid rgba(229, 193, 120, 0.45);
+  border-radius: 9999px 9999px 2rem 2rem;
+  position: relative;
 }
 
 @utility gold-rule {
@@ -210,36 +279,48 @@
   background: linear-gradient(
     to right,
     transparent,
-    oklch(0.82 0.13 87 / 0.7),
+    rgba(229, 193, 120, 0.85),
     transparent
   );
 }
 
+@utility gold-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(229, 193, 120, 0.22),
+    rgba(178, 136, 59, 0.12)
+  );
+  border: 1px solid rgba(229, 193, 120, 0.45);
+  color: var(--gold-soft);
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+}
+
 @utility aurora-grain {
   background-image: radial-gradient(
-    oklch(1 0 0 / 0.05) 1px,
+    oklch(1 0 0 / 0.06) 1px,
     transparent 1px
   );
   background-size: 3px 3px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 @utility aurora-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.55;
+  filter: blur(80px);
+  opacity: 0.6;
   will-change: transform;
 }
 
 @utility aurora-blob-1 {
   top: -18%;
   left: -20%;
-  height: 60vh;
-  width: 75vw;
+  height: 65vh;
+  width: 80vw;
   background: radial-gradient(
     circle at 40% 40%,
-    oklch(0.7 0.15 175 / 0.75),
+    oklch(0.72 0.16 175 / 0.75),
     transparent 70%
   );
   animation: drift-a 18s ease-in-out infinite alternate;
@@ -248,11 +329,11 @@
 @utility aurora-blob-2 {
   bottom: -22%;
   right: -25%;
-  height: 62vh;
-  width: 80vw;
+  height: 65vh;
+  width: 85vw;
   background: radial-gradient(
     circle at 60% 50%,
-    oklch(0.8 0.13 88 / 0.55),
+    oklch(0.82 0.14 88 / 0.55),
     transparent 70%
   );
   animation: drift-b 22s ease-in-out infinite alternate;
@@ -261,11 +342,11 @@
 @utility aurora-blob-3 {
   top: 25%;
   right: -18%;
-  height: 45vh;
-  width: 60vw;
+  height: 50vh;
+  width: 65vw;
   background: radial-gradient(
     circle at 50% 50%,
-    oklch(0.72 0.12 20 / 0.4),
+    oklch(0.74 0.13 20 / 0.45),
     transparent 70%
   );
   animation: drift-c 26s ease-in-out infinite alternate;
@@ -308,17 +389,46 @@
   }
 }
 
+@keyframes spin-very-slow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@utility spin-very-slow {
+  animation: spin-very-slow 120s linear infinite;
+}
+
 @keyframes float-slow {
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-14px) rotate(1.5deg);
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
 @utility float-slow {
   animation: float-slow 9s ease-in-out infinite;
+}
+
+@utility pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
 }
 

@@ -8,7 +8,6 @@ import { wedding } from "@/lib/wedding";
 const arabesque =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23b98b3f' stroke-width='1.1'%3E%3Crect x='30' y='30' width='100' height='100'/%3E%3Crect x='30' y='30' width='100' height='100' transform='rotate(45 80 80)'/%3E%3Ccircle cx='80' cy='80' r='50'/%3E%3Ccircle cx='80' cy='80' r='18'/%3E%3Cpath d='M0 80h160M80 0v160'/%3E%3C/g%3E%3C/svg%3E\")";
 
-
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-background px-6 py-24">
@@ -34,8 +33,6 @@ export function Footer() {
           </p>
         </Reveal>
 
-
-
         <Reveal delay={0.12}>
           <h2 className="mt-10 font-display text-5xl text-gilded">
             {wedding.bride.name} <span className="italic text-gold">&amp;</span>{" "}
@@ -52,15 +49,14 @@ export function Footer() {
           </p>
         </Reveal>
       </div>
-            <a
-          href="https://www.instagram.com/invitestory.in/"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 inline-block text-[10px] uppercase tracking-[0.35em] text-current opacity-70 transition-opacity hover:opacity-100"
-        >
-          Follow @invitestory.in on Instagram
-        </a>
-      </footer>
-
+      <a
+        href="https://www.instagram.com/invitestory.in/"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-3 inline-block text-[10px] uppercase tracking-[0.35em] text-current opacity-70 transition-opacity hover:opacity-100"
+      >
+        Follow @invitestory.in on Instagram
+      </a>
+    </footer>
   );
 }

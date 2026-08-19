@@ -18,7 +18,6 @@ export function OpenGate({ children }: { children: ReactNode }) {
     };
   }, [opened]);
 
-
   useEffect(() => {
     if (!opened) return;
     const t = setTimeout(() => setGone(true), 2200);

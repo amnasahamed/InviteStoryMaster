@@ -1,8 +1,6 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 
-const Aurora = lazy(() =>
-  import("@/components/Aurora").then((m) => ({ default: m.default })),
-);
+const Aurora = lazy(() => import("@/components/Aurora").then((m) => ({ default: m.default })));
 
 /** WebGL aurora wash — mounts only in the browser, after hydration. */
 export function AuroraBackdrop() {

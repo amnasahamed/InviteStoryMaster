@@ -165,7 +165,6 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-
 }
 
 /* ---------- Ornamental layer: gilding, paper grain, arabesque ---------- */
@@ -236,13 +235,12 @@
 
 @utility gilded-card {
   border: 1px solid color-mix(in oklab, var(--gold) 38%, transparent);
-  background:
-    linear-gradient(
-        180deg,
-        color-mix(in oklab, var(--card) 92%, transparent),
-        color-mix(in oklab, var(--card) 78%, transparent)
-      )
-      padding-box;
+  background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--card) 92%, transparent),
+      color-mix(in oklab, var(--card) 78%, transparent)
+    )
+    padding-box;
   box-shadow:
     0 1px 0 color-mix(in oklab, white 70%, transparent) inset,
     0 24px 60px -32px color-mix(in oklab, var(--foreground) 45%, transparent),

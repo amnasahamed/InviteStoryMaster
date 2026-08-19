@@ -47,15 +47,14 @@ export function SiteFooter() {
           {couple.hashtag}
         </p>
       </Reveal>
-            <a
-          href="https://www.instagram.com/invitestory.in/"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 inline-block text-[10px] uppercase tracking-[0.35em] text-current opacity-70 transition-opacity hover:opacity-100"
-        >
-          Follow @invitestory.in on Instagram
-        </a>
-      </footer>
-
+      <a
+        href="https://www.instagram.com/invitestory.in/"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-3 inline-block text-[10px] uppercase tracking-[0.35em] text-current opacity-70 transition-opacity hover:opacity-100"
+      >
+        Follow @invitestory.in on Instagram
+      </a>
+    </footer>
   );
 }

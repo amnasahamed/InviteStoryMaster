@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --dusk-deep: #061126;
+    --dusk-purple: #10254a;
+    --dusk-magenta: #a74767;
+    --glow-gold: #d8e2f0;
+    --glow-warm: #e8afc2;
+  }
+
+  html {
+    background: var(--dusk-deep);
+  }
+
+  body {
+    background: var(--dusk-deep);
+    color: #f4efe8;
+    font-family: "Outfit", system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(232, 175, 194, 0.35);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #061126;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #a74767;
+    border-radius: 99px;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: "Great Vibes", cursive;
+  }
+  .font-display {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .text-gold {
+    background: linear-gradient(
+      115deg,
+      #f4efe8 0%,
+      #d8e2f0 36%,
+      #ffffff 52%,
+      #e8afc2 79%,
+      #f4efe8 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hairline-gold {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(216, 226, 240, 0.75),
+      transparent
+    );
+  }
+
+  .journey-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(216, 226, 240, 0.45);
+    border-radius: 999px;
+    background: rgba(244, 239, 232, 0.94);
+    padding: 0.45rem 0.5rem 0.45rem 1.35rem;
+    color: #061126;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.85),
+      0 14px 38px rgba(0, 0, 0, 0.28);
+    transition:
+      transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .journey-button:hover {
+    transform: translateY(-2px);
+    background: white;
+  }
+
+  .journey-button:active {
+    transform: scale(0.98);
+  }
+
+  .journey-button__mark {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border-radius: 999px;
+    background: #10254a;
+    color: #e8afc2;
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .journey-button:hover .journey-button__mark {
+    transform: rotate(18deg) scale(1.05);
+  }
+
+  .tap-ripple {
+    position: relative;
+    display: grid;
+    width: 5.5rem;
+    height: 5.5rem;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 239, 232, 0.7);
+    background: rgba(6, 17, 38, 0.25);
+    color: #f4efe8;
+    backdrop-filter: blur(8px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      0 0 48px rgba(232, 175, 194, 0.34);
+  }
+
+  .tap-ripple__ring {
+    position: absolute;
+    inset: -1px;
+    border: 1px solid rgba(232, 175, 194, 0.65);
+    border-radius: inherit;
+    animation: tap-wave 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+
+  .tap-ripple__core {
+    font-size: 1.25rem;
+    animation: core-breathe 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+}
+
+@keyframes tap-wave {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.72);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+
+@keyframes core-breathe {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(0.92) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08) rotate(12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

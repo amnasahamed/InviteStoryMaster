@@ -160,7 +160,8 @@
     pointer-events: none;
     opacity: 0.5;
     mix-blend-mode: multiply;
-    background-image: radial-gradient(
+    background-image:
+      radial-gradient(
         circle at 20% 30%,
         color-mix(in oklab, var(--color-ink) 6%, transparent),
         transparent 55%
@@ -227,4 +228,3 @@
     transition-duration: 0.001ms !important;
   }
 }
-

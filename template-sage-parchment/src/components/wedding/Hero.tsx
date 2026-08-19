@@ -8,9 +8,9 @@ import { useOpened } from "./OpenGate";
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   const { couple, invite, event, venue } = invitation;
   const opened = useOpened();
@@ -18,11 +18,11 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[100svh] flex-col items-center overflow-hidden bg-sage-deep"
+      className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden bg-parchment"
     >
       <AuroraBackdrop />
 
-      <motion.div style={{ y: imgY }} className="absolute inset-0">
+      <motion.div style={{ y: imgY }} className="absolute -top-10 inset-x-0 bottom-0">
         <img
           src={heroArch}
           alt="Illustrated Mughal arch with an Indian bride and groom surrounded by lotus flowers"
@@ -30,12 +30,15 @@ export function Hero() {
           height={1536}
           className="h-full w-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-pine/25 via-transparent to-parchment" />
+        <div className="absolute inset-0 bg-gradient-to-b from-pine/25 via-transparent via-40% to-parchment" />
       </motion.div>
+
+      {/* Fixed bottom gradient to guarantee seamless transition to next section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-72 bg-gradient-to-t from-parchment via-parchment/95 via-60% to-transparent" />
 
       <motion.div
         style={{ y: textY }}
-        className="relative z-10 mt-auto w-full bg-gradient-to-t from-parchment via-parchment/75 to-transparent px-6 pt-24 pb-24 text-center"
+        className="relative z-20 mt-auto w-full px-6 pt-24 pb-8 text-center"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -56,7 +59,6 @@ export function Hero() {
           <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
             and
           </span>
-
           {couple.groomShort}
         </motion.h1>
 
@@ -95,15 +97,12 @@ export function Hero() {
         </motion.p>
       </motion.div>
 
-      <motion.div
-        style={{ opacity: fade }}
-        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-center"
-      >
+      <motion.div style={{ opacity: fade }} className="relative z-20 pb-6 text-center">
         <span className="text-[0.6rem] tracking-[0.3em] text-ink/60 uppercase">scroll</span>
         <motion.div
           animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="mx-auto mt-2 h-10 w-px bg-gold"
+          className="mx-auto mt-2 h-8 w-px bg-gold"
         />
       </motion.div>
     </section>

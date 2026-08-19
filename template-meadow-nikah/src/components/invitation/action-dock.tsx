@@ -1,10 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { CalendarPlus, Navigation, Share2 } from "lucide-react";
+import { CalendarPlus, Navigation } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import { downloadInvite } from "@/lib/calendar";
+import { openGoogleCalendar } from "@/lib/calendar";
 import { wedding } from "@/lib/wedding";
 
 /** Floating quick actions that slide up once the hero is scrolled past. */
@@ -18,34 +18,16 @@ export function ActionDock({ enabled }: { enabled: boolean }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const share = async () => {
-    const data = {
-      title: `${wedding.bride.name} & ${wedding.groom.name} — Wedding Invitation`,
-      text: `You're invited! ${wedding.dateLabel} · ${wedding.venue.name}`,
-      url: typeof window !== "undefined" ? window.location.href : "",
-    };
-    try {
-      if (navigator.share) await navigator.share(data);
-      else {
-        await navigator.clipboard.writeText(`${data.text}\n${data.url}`);
-        toast.success("Invitation link copied");
-      }
-    } catch {
-      /* dismissed */
-    }
-  };
-
   const items = [
     {
       icon: CalendarPlus,
       label: "Save date",
       onClick: () => {
-        downloadInvite();
-        toast.success("Added to your calendar", { description: wedding.dateLabel });
+        openGoogleCalendar();
+        toast.success("Opening Google Calendar...", { description: wedding.dateLabel });
       },
     },
     { icon: Navigation, label: "Directions", href: wedding.venue.mapsUrl },
-    { icon: Share2, label: "Share", onClick: share },
   ];
 
   return (

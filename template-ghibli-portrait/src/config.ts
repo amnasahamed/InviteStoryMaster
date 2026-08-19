@@ -55,7 +55,7 @@ export interface InvitationConfig {
   story: StoryMilestone[]
   details: {
     ceremony: { title: string; venue: string; time: string; note: string }
-    reception: { title: string; venue: string; time: string; note: string }
+    reception?: { title: string; venue: string; time: string; note: string }
     dressCode: string
   }
   venue: {

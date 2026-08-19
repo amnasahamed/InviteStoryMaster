@@ -5,13 +5,13 @@ import { CalendarPlus, Clock, MapPin, Navigation } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal, Arabesque, Corners, SectionHeading, Skyline } from "./atmosphere";
 import { Button } from "@/components/ui/button";
-import { downloadInvite } from "@/lib/calendar";
+import { downloadInvite, openGoogleCalendar } from "@/lib/calendar";
 import { wedding } from "@/lib/wedding";
 
 export function EventDetails() {
   const addToCalendar = () => {
-    downloadInvite();
-    toast.success("Saved to your calendar", {
+    openGoogleCalendar();
+    toast.success("Opening Google Calendar...", {
       description: `${wedding.dateLabel} · ${wedding.venue.name}`,
     });
   };

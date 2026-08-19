@@ -9,7 +9,6 @@ const PETALS = Array.from({ length: 8 }, (_, i) => ({
   opacity: 0.14 + (i % 3) * 0.05,
 }));
 
-
 export function Petals() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-30 overflow-hidden">

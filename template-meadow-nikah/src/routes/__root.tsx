@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { wedding } from "../lib/wedding";
 
 function NotFoundComponent() {
   return (
@@ -76,15 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "InviteStory" },
-      { name: "description", content: "Digital wedding invitation" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { title: wedding.meta.title },
+      { name: "description", content: wedding.meta.description },
       { name: "author", content: "InviteStory" },
-      { property: "og:title", content: "InviteStory" },
-      { property: "og:description", content: "Digital wedding invitation" },
+      { property: "og:title", content: wedding.meta.ogTitle },
+      { property: "og:description", content: wedding.meta.ogDescription },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: wedding.meta.ogImage },
+      { property: "og:image:secure_url", content: wedding.meta.ogImage },
+      { property: "og:image:type", content: wedding.meta.ogImageType },
+      { property: "og:image:alt", content: wedding.meta.ogImageAlt },
+      { property: "og:site_name", content: wedding.meta.ogSiteName },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@invitestory.in" },
+      { name: "twitter:title", content: wedding.meta.ogTitle },
+      { name: "twitter:description", content: wedding.meta.ogDescription },
+      { name: "twitter:image", content: wedding.meta.ogImage },
+      { name: "twitter:image:alt", content: wedding.meta.ogImageAlt },
     ],
     links: [
       {
@@ -104,7 +114,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

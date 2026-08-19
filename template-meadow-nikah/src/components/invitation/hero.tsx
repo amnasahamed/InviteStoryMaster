@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MapPin } from "lucide-react";
 import { useRef } from "react";
 import { Aurora, FloralDivider } from "./atmosphere";
 import { wedding } from "@/lib/wedding";
@@ -53,7 +53,7 @@ export function Hero({ start = true }: { start?: boolean }) {
 
       <motion.div
         style={{ y: reduce ? 0 : textY, opacity: reduce ? 1 : textOpacity }}
-        className="relative z-10 mx-auto w-full max-w-md px-7 pt-[14vh] text-center"
+        className="relative z-10 mx-auto w-full max-w-md px-7 pt-[14vh] text-center flex flex-col items-center"
       >
         <motion.p {...rise(0.05)} className="font-display text-xl text-gold" dir="rtl" lang="ar">
           {wedding.bismillah}
@@ -82,15 +82,19 @@ export function Hero({ start = true }: { start?: boolean }) {
           <FloralDivider className="mt-6" />
         </motion.div>
 
-        <motion.p
+        <motion.div
           {...rise(0.6)}
-          className="mt-5 text-sm leading-relaxed tracking-[0.16em] uppercase text-foreground/80"
+          className="mt-6 inline-flex flex-col items-center gap-1.5 rounded-2xl border border-gold/40 bg-card/90 px-6 py-3.5 shadow-soft backdrop-blur-md"
         >
-          {wedding.dateLabel}
-        </motion.p>
-        <motion.p {...rise(0.72)} className="mt-2 text-sm text-muted-foreground">
-          {wedding.venue.name}, New Delhi
-        </motion.p>
+          <p className="font-display text-base font-semibold tracking-[0.16em] uppercase text-foreground">
+            {wedding.dateLabel}
+          </p>
+          <div className="h-px w-10 bg-gold/30" />
+          <p className="flex items-center justify-center gap-1.5 text-xs font-medium text-foreground/80">
+            <MapPin className="h-3.5 w-3.5 text-gold shrink-0" />
+            {wedding.venue.name}, Kerala
+          </p>
+        </motion.div>
       </motion.div>
 
       <motion.div

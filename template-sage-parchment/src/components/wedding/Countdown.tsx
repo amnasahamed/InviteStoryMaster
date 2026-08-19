@@ -24,7 +24,7 @@ export function Countdown() {
     <section className="relative px-5 py-20">
       <Reveal className="mx-auto max-w-lg text-center">
         <p className="text-[0.65rem] tracking-[0.4em] text-ink/60 uppercase">
-          {left?.done ? "Today is the day" : "Counting down to the wedding"}
+          {left?.done ? "Today is the day" : "Counting down to the celebration"}
         </p>
         <div className="mx-auto mt-5 w-32 gold-rule" />
 

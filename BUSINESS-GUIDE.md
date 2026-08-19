@@ -58,6 +58,7 @@ If a change touches a component file or styles, that's a bug — fix the config.
 | 21 | `template-lakeview-lanterns` | Lakeview Lanterns | Twilight Kerala backwaters, parallax lanterns, illustrated couple | Kerala lakeside evening weddings | `src/config.ts` |
 | 21 | `template-ivory-waltz` | Ivory Waltz | Cream linen + black suit, layered faceless dance, parallax | Soft modern Nikah / cream-and-black aesthetic | `src/config.ts` |
 | 22 | `template-petal-path` | Petal Path Palace | Layered parallax floral arch, palace aisle, falling petals | Sikh / North-Indian palace weddings | `src/config.ts` |
+| 23 | `template-lotus-barge` | Moonlit Lotus Barge | Indigo lake, royal lotus barge, two-tap cinematic mandap reveal | Udaipur destination and royal palace weddings | `src/config.ts` |
 
 ### Known duplicate pairs
 

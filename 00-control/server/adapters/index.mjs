@@ -3,6 +3,7 @@ import path from "node:path";
 import { jsString } from "../client-model.mjs";
 import { writeMidnight } from "./midnight.mjs";
 import { writeNoor } from "./noor.mjs";
+import { writeLotusBarge } from "./lotus-barge.mjs";
 
 function s(v) {
   return jsString(v);
@@ -862,6 +863,8 @@ export async function applyAdapter(clientDir, client, template) {
       return writeFlatVite(clientDir, client, configPath);
     case "lake-pichola":
       return writeLakePichola(clientDir, client, configPath);
+    case "lotus-barge":
+      return writeLotusBarge(clientDir, client, configPath);
     default:
       throw new Error(`Unknown adapter: ${template.adapter}`);
   }
