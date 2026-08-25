@@ -107,7 +107,7 @@ export default function IntroJourney({ onOpened }: Props) {
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,12,29,.15),rgba(4,12,29,.08)_42%,rgba(4,12,29,.82))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,12,29,.22),rgba(4,12,29,.04)_38%,rgba(4,12,29,.88))]" />
 
           <video
             ref={videoRef}
@@ -148,18 +148,18 @@ export default function IntroJourney({ onOpened }: Props) {
 
           {state.stage === "landing" && (
             <motion.div
-              className="absolute inset-x-0 bottom-[7vh] z-30 mx-auto flex max-w-md flex-col items-center px-8 text-center text-pearl"
+              className="absolute inset-x-0 bottom-[6vh] z-30 mx-auto flex max-w-lg flex-col items-center px-8 text-center text-pearl [text-shadow:0_2px_18px_rgba(4,12,29,.9)]"
               initial={reduceMotion ? false : { opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="font-sans text-[10px] uppercase tracking-[0.34em] text-moon">
+              <p className="eyebrow">
                 {wedding.intro.eyebrow}
               </p>
-              <h1 className="font-display mt-3 text-[2.55rem] leading-[0.98] sm:text-5xl">
+              <h1 className="font-display mt-3 max-w-md text-[3rem] font-medium leading-[.9] tracking-[-.035em] sm:text-6xl">
                 {wedding.intro.title}
               </h1>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-pearl/72">
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-pearl/82">
                 {wedding.intro.body}
               </p>
               <button

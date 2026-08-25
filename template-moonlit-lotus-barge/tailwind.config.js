@@ -10,6 +10,8 @@ export default {
         "lotus-light": "#E8AFC2",
         moon: "#D8E2F0",
         pearl: "#F4EFE8",
+        champagne: "#E6C68A",
+        gold: "#A77A35",
         dusk: {
           deep: "#061126",
           purple: "#10254A",

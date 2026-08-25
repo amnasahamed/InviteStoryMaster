@@ -52,7 +52,7 @@ function LanternEl({ lantern }: { lantern: Lantern }) {
         src={SPRITE}
         alt=""
         draggable={false}
-        className="h-auto w-full select-none drop-shadow-[0_0_18px_rgba(255,179,71,0.55)]"
+        className="h-auto w-full select-none drop-shadow-[0_0_18px_rgba(233,198,164,0.55)]"
         style={{
           animation: `candle-flicker ${2 + (lantern.id % 5) * 0.35}s ease-in-out infinite`,
         }}
@@ -66,7 +66,7 @@ export default function FlyingLanterns({
 }: {
   enabled?: boolean;
 }) {
-  const ambient = useMemo(() => makeAmbient(16), []);
+  const ambient = useMemo(() => makeAmbient(0), []);
   const [launched, setLaunched] = useState<Lantern[]>([]);
   const nextId = useRef(1000);
 
@@ -116,11 +116,11 @@ export default function FlyingLanterns({
       <button
         type="button"
         onClick={releaseLantern}
-        className="group pointer-events-auto fixed bottom-6 right-5 z-50 flex items-center gap-2 rounded-full border border-glow-gold/35 bg-dusk-deep/55 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-glow-gold backdrop-blur-md transition-all duration-500 hover:border-glow-gold/70 hover:bg-dusk-deep/75 active:scale-[0.97] sm:bottom-8 sm:right-8"
+        className="group pointer-events-auto absolute right-7 top-24 z-50 flex items-center gap-3 border-b border-glow-gold/35 bg-transparent pb-2 text-[9px] uppercase tracking-[0.24em] text-glow-gold transition-all duration-300 hover:border-glow-gold hover:text-[#f4e7d0] active:scale-[0.97] sm:right-14 sm:top-28"
         aria-label="Release a sky lantern"
       >
-        <span className="inline-block h-2 w-2 rounded-full bg-glow-warm shadow-lantern transition-transform group-hover:scale-125" />
-        Release a lantern
+        <span className="inline-block h-1.5 w-1.5 rotate-45 bg-glow-warm shadow-lantern transition-transform group-hover:-translate-y-1" />
+        Light a lantern
       </button>
     </>
   );

@@ -24,36 +24,36 @@ export default function Events() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden px-6 py-28 sm:py-36">
+    <section className="paper-section relative overflow-hidden px-6 py-28 sm:py-40">
       <img
         src={wedding.assets.mandap}
         alt=""
         className="pointer-events-none absolute left-1/2 top-16 w-[78%] max-w-xl -translate-x-1/2 opacity-[0.07]"
       />
-      <SectionHeading kicker="Save the date" title="The Wedding" />
+      <div className="[&_.section-heading_h2]:!text-ink"><SectionHeading kicker="Save the date" title="One moonlit evening" /></div>
 
-      <div className="mx-auto flex max-w-md flex-col gap-8">
+      <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[1.1fr_.9fr] md:items-start">
         <Reveal>
-          <article className="rounded-[2rem] border border-moon/20 bg-night/52 p-8 text-center shadow-[0_24px_70px_rgba(0,0,0,0.32)]">
-            <p className="text-[11px] uppercase tracking-[0.35em] text-glow-gold/80">
+          <article className="border-l border-gold/45 px-7 py-2 text-left sm:px-10">
+            <p className="text-[11px] uppercase tracking-[0.35em] text-gold">
               {event.dayLabel}
             </p>
-            <p className="font-display mt-2 text-6xl font-semibold text-glow-gold">
+            <p className="font-display mt-2 text-8xl font-medium leading-none text-ink">
               {event.dayNum}
             </p>
-            <p className="font-display mt-1 text-lg tracking-[0.15em] text-pearl/85">
+            <p className="font-display mt-1 text-xl tracking-[0.12em] text-ink/75">
               {event.monthLabel}
             </p>
             <div className="hairline-gold mx-auto my-5 w-24" />
-            <p className="font-display text-xl text-pearl">{event.time}</p>
-            <p className="mt-2 text-sm text-pearl/65">{event.venue}</p>
-            <p className="mt-4 text-[13px] leading-relaxed text-pearl/55">
+            <p className="font-display text-2xl text-ink">{event.time}</p>
+            <p className="mt-2 text-sm text-ink/65">{event.venue}</p>
+            <p className="mt-5 max-w-sm text-[13px] leading-relaxed text-ink/55">
               {event.note}
             </p>
           </article>
         </Reveal>
 
-        {wedding.sections?.countdown !== false && (
+        <div className="space-y-8">{wedding.sections?.countdown !== false && (
           <Reveal delay={0.1}>
             <div className="grid grid-cols-4 gap-3">
               {(
@@ -66,12 +66,12 @@ export default function Events() {
               ).map(([label, value]) => (
                 <div
                   key={label}
-                  className="rounded-2xl border border-moon/15 bg-night/45 py-4 text-center"
+                  className="border-t border-gold/30 py-4 text-center"
                 >
-                  <p className="font-display text-2xl text-glow-gold sm:text-3xl">
+                  <p className="font-display text-3xl text-ink sm:text-4xl">
                     {String(value).padStart(2, "0")}
                   </p>
-                  <p className="mt-1 text-[9px] uppercase tracking-[0.25em] text-pearl/50">
+                  <p className="mt-1 text-[9px] uppercase tracking-[0.25em] text-ink/45">
                     {label}
                   </p>
                 </div>
@@ -81,24 +81,25 @@ export default function Events() {
         )}
 
         <Reveal delay={0.16} className="flex flex-col gap-3">
-          <p className="text-center text-[11px] uppercase tracking-[0.3em] text-glow-gold/70">
+          <p className="text-left text-[11px] uppercase tracking-[0.3em] text-gold">
             Ceremony flow
           </p>
-          <ol className="relative space-y-3 before:absolute before:bottom-5 before:left-[7px] before:top-5 before:w-px before:bg-moon/18">
+          <ol className="relative space-y-4 before:absolute before:bottom-5 before:left-[7px] before:top-5 before:w-px before:bg-gold/25">
             {wedding.program.map((item) => (
               <li
                 key={item.name}
                 className="relative flex items-center justify-between gap-4 pl-8 text-sm"
               >
-                <span className="absolute left-0 h-3.5 w-3.5 rounded-full border border-lotus-light/60 bg-ink" />
-                <span className="text-pearl/85">{item.name}</span>
-                <span className="font-display tracking-wide text-glow-gold">
+                <span className="absolute left-0 h-3.5 w-3.5 rounded-full border border-gold/60 bg-[var(--paper)]" />
+                <span className="text-ink/80">{item.name}</span>
+                <span className="font-display tracking-wide text-gold">
                   {item.time}
                 </span>
               </li>
             ))}
           </ol>
         </Reveal>
+        </div>
       </div>
     </section>
   );

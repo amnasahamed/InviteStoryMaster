@@ -31,12 +31,11 @@ export function SectionHeading({
   title: string;
 }) {
   return (
-    <Reveal className="mb-10 flex flex-col items-center gap-3 text-center">
-      <span className="text-[11px] uppercase tracking-[0.4em] text-glow-gold/90">
+    <Reveal className="mb-12 flex flex-col items-start gap-3 text-left sm:mb-16">
+      <span className="section-kicker">
         {kicker}
       </span>
-      <h2 className="font-script text-gold text-5xl sm:text-6xl">{title}</h2>
-      <div className="hairline-gold w-40" />
+      <h2 className="font-display max-w-2xl text-5xl font-medium leading-[0.92] tracking-[-0.04em] text-[#f4e7d0] sm:text-7xl">{title}</h2>
     </Reveal>
   );
 }

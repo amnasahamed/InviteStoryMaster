@@ -5,15 +5,15 @@ export default {
     extend: {
       colors: {
         dusk: {
-          deep: "#1a0b24",
-          purple: "#301934",
-          magenta: "#8E2856",
-          rose: "#c45b7a",
+          deep: "#071f24",
+          purple: "#103b3d",
+          magenta: "#a66f70",
+          rose: "#c8958e",
         },
         glow: {
-          gold: "#D4AF37",
-          warm: "#FFB347",
-          flame: "#FDB813",
+          gold: "#D8BC83",
+          warm: "#E9C6A4",
+          flame: "#F0AE65",
         },
       },
       fontFamily: {

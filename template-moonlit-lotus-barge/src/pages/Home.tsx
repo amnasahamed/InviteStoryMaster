@@ -33,7 +33,8 @@ export default function Home() {
   }, [opened, reduceMotion]);
 
   return (
-    <main className="relative min-h-svh overflow-x-hidden bg-ink">
+    <main id="main-content" className="relative min-h-svh overflow-x-hidden bg-ink">
+      <a href="#invitation" className="skip-link">Skip to invitation</a>
       <div
         inert={!opened}
         aria-hidden={!opened}

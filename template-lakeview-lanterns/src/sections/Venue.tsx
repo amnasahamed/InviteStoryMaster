@@ -1,70 +1,14 @@
 import { CalendarPlus, Navigation, MapPin } from "lucide-react";
 import Reveal, { SectionHeading } from "../components/Reveal";
-import {
-  wedding,
-  googleCalendarUrl,
-  downloadICS,
-  mapsEmbedUrl,
-  mapsDirectionsUrl,
-} from "../config";
+import { wedding, googleCalendarUrl, downloadICS, mapsEmbedUrl, mapsDirectionsUrl } from "../config";
 
 export default function Venue() {
-  return (
-    <section className="relative px-6 py-24">
-      <SectionHeading kicker="Where & When" title="The Venue" />
-
-      <div className="mx-auto flex max-w-md flex-col gap-6">
-        <Reveal className="flex flex-col items-center gap-2 text-center">
-          <h3 className="font-display text-3xl text-glow-gold">
-            {wedding.venue.name}
-          </h3>
-          <p className="flex items-center gap-2 text-[13px] text-[#f7e9d2]/70">
-            <MapPin size={14} className="text-glow-warm" />
-            {wedding.venue.address}
-          </p>
-          <p className="font-display mt-1 text-sm tracking-wide text-[#f7e9d2]/60">
-            {wedding.dateLabel} · {wedding.timeLabel}
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.08}>
-          <div className="overflow-hidden rounded-[1.75rem] border border-glow-gold/30 shadow-[0_10px_50px_rgba(0,0,0,0.45)]">
-            <iframe
-              title="Wedding venue map"
-              src={mapsEmbedUrl}
-              className="h-64 w-full grayscale-[20%] contrast-[1.05] sm:h-72"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.14} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <a
-            href={googleCalendarUrl()}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full border border-glow-gold/40 bg-glow-gold/10 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-glow-gold transition-colors hover:bg-glow-gold/20"
-          >
-            <CalendarPlus size={14} /> Google Calendar
-          </a>
-          <button
-            type="button"
-            onClick={downloadICS}
-            className="flex items-center justify-center gap-2 rounded-full border border-glow-gold/40 bg-glow-gold/10 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-glow-gold transition-colors hover:bg-glow-gold/20"
-          >
-            <CalendarPlus size={14} /> Download .ics
-          </button>
-          <a
-            href={mapsDirectionsUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.04] px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-[#f7e9d2]/85 transition-colors hover:border-glow-gold/40 hover:text-glow-gold sm:col-span-2"
-          >
-            <Navigation size={14} /> Open in Maps
-          </a>
-        </Reveal>
-      </div>
-    </section>
-  );
+  return <section className="relative px-6 py-28 sm:px-10 sm:py-40"><div className="mx-auto max-w-6xl">
+    <SectionHeading kicker="Where & when" title="Meet us by the water" />
+    <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <Reveal className="flex flex-col items-start gap-3 text-left lg:sticky lg:top-28"><h3 className="font-display text-4xl text-glow-gold sm:text-5xl">{wedding.venue.name}</h3><p className="flex items-center gap-2 text-sm text-[#f7e9d2]/65"><MapPin size={14} />{wedding.venue.address}</p><p className="font-display mt-5 max-w-xs text-lg leading-7 text-[#f7e9d2]/60">{wedding.dateLabel}<br />{wedding.timeLabel}</p></Reveal>
+      <div className="flex flex-col gap-5"><Reveal delay={0.08}><div className="map-frame overflow-hidden border border-glow-gold/25 p-2"><iframe title="Wedding venue map" src={mapsEmbedUrl} className="h-72 w-full grayscale-[35%] sepia-[15%] contrast-[1.08] sm:h-96" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></Reveal>
+      <Reveal delay={0.14} className="grid grid-cols-1 gap-3 sm:grid-cols-2"><a href={googleCalendarUrl()} target="_blank" rel="noreferrer" className="action-link"><CalendarPlus size={14}/>Google Calendar</a><button type="button" onClick={downloadICS} className="action-link"><CalendarPlus size={14}/>Download .ics</button><a href={mapsDirectionsUrl} target="_blank" rel="noreferrer" className="action-link sm:col-span-2"><Navigation size={14}/>Open in Maps</a></Reveal></div>
+    </div>
+  </div></section>;
 }

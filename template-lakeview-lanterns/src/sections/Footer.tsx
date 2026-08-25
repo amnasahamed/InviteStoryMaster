@@ -18,13 +18,13 @@ export default function Footer() {
 
   return (
     <footer className="relative flex min-h-[70svh] flex-col justify-end overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-dusk-deep via-[#14081c] to-[#0a0510]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dusk-deep via-[#061b20] to-[#031216]" />
       <img
-        src="./assets/layers/layer-01-sky.png"
+        src="./assets/hero-lakeview-teal-v1.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-40"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0510] via-[#0a0510]/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#031216] via-[#031216]/70 to-transparent" />
 
       <div className="relative z-10 mb-6 overflow-hidden border-y border-glow-gold/25 py-3">
         <div
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       <Reveal className="relative z-10 mx-auto mb-14 mt-4 flex max-w-sm flex-col items-center gap-4 px-6 text-center">
-        <p className="font-script text-gold text-4xl leading-snug">
+        <p className="font-display text-4xl italic leading-snug text-glow-gold">
           We can't wait to celebrate with you
         </p>
         <p className="text-[11px] uppercase tracking-[0.35em] text-[#f7e9d2]/55">

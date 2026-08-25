@@ -1,4 +1,4 @@
-import { CalendarPlus, Navigation, MapPin } from "lucide-react";
+import { CalendarPlus, Navigation } from "lucide-react";
 import Reveal, { SectionHeading } from "../components/Reveal";
 import {
   wedding,
@@ -9,21 +9,25 @@ import {
 
 export default function Venue() {
   return (
-    <section className="relative px-6 py-28 sm:py-36">
-      <SectionHeading kicker="Where and when" title="The Venue" />
+    <section className="night-section relative overflow-hidden px-6 py-28 sm:py-40">
+      <SectionHeading kicker="Where and when" title="Meet us by the water" />
 
-      <div className="mx-auto flex max-w-md flex-col gap-6">
-        <Reveal className="flex flex-col items-center gap-2 text-center">
-          <h3 className="font-display text-3xl text-glow-gold">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.78fr_1.22fr] md:items-end">
+        <Reveal className="flex flex-col items-start gap-3 text-left md:pb-4">
+          <p className="section-kicker">Lake Pichola · Udaipur</p>
+          <h3 className="font-display text-5xl leading-none text-pearl sm:text-6xl">
             {wedding.venue.name}
           </h3>
-          <p className="flex items-center gap-2 text-[13px] text-pearl/70">
-            <MapPin size={14} className="text-glow-warm" />
+          <p className="max-w-xs text-[13px] leading-relaxed text-pearl/60">
             {wedding.venue.address}
           </p>
-          <p className="font-display mt-1 text-sm tracking-wide text-pearl/60">
+          <p className="font-display mt-3 text-lg tracking-wide text-champagne">
             {wedding.dateLabel}, {wedding.timeLabel}
           </p>
+          <div className="mt-6 flex flex-wrap gap-5">
+            <a href={googleCalendarUrl()} target="_blank" rel="noreferrer" className="text-link flex items-center gap-2"><CalendarPlus size={13}/> Add to calendar</a>
+            <button type="button" onClick={downloadICS} className="text-link">Download .ics</button>
+          </div>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -31,7 +35,7 @@ export default function Venue() {
             href={mapsDirectionsUrl}
             target="_blank"
             rel="noreferrer"
-            className="group relative flex h-64 items-end overflow-hidden rounded-[2rem] border border-moon/20 shadow-[0_18px_60px_rgba(0,0,0,0.4)] sm:h-72"
+            className="group relative flex h-[25rem] items-end overflow-hidden border border-champagne/20 shadow-[0_28px_80px_rgba(0,0,0,0.4)]"
             aria-label={`Open directions to ${wedding.venue.name}`}
           >
             <img
@@ -51,38 +55,13 @@ export default function Venue() {
                   {wedding.venue.directionHint}
                 </p>
               </div>
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-moon/30 bg-ink/45 text-lotus-light backdrop-blur-md">
+              <span className="grid h-11 w-11 shrink-0 place-items-center border border-champagne/30 bg-ink/55 text-champagne backdrop-blur-md transition-transform duration-300 group-hover:-translate-y-1">
                 <Navigation size={16} />
               </span>
             </div>
           </a>
         </Reveal>
 
-        <Reveal delay={0.14} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <a
-            href={googleCalendarUrl()}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full border border-glow-gold/40 bg-glow-gold/10 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-glow-gold transition-colors hover:bg-glow-gold/20"
-          >
-            <CalendarPlus size={14} /> Google Calendar
-          </a>
-          <button
-            type="button"
-            onClick={downloadICS}
-            className="flex items-center justify-center gap-2 rounded-full border border-glow-gold/40 bg-glow-gold/10 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-glow-gold transition-colors hover:bg-glow-gold/20"
-          >
-            <CalendarPlus size={14} /> Download .ics
-          </button>
-          <a
-            href={mapsDirectionsUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full border border-moon/20 bg-night/45 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-pearl/85 transition-colors duration-500 ease-[cubic-bezier(.16,1,.3,1)] hover:border-lotus-light/45 hover:text-lotus-light sm:col-span-2"
-          >
-            <Navigation size={14} /> Open in Maps
-          </a>
-        </Reveal>
       </div>
     </section>
   );

@@ -23,19 +23,103 @@ function LivingDetails(){
 }
 
 function Opening({onOpen}) {
-  return <motion.div className="opening opening--cinematic" exit={{opacity:0,scale:1.035,filter:'blur(8px)'}} transition={{duration:1.05,ease:[.76,0,.24,1]}}>
-    <img src="/assets/flow-first-frame.png" alt="A flower-filled wedding pavilion with closed green silk curtains" />
-    <div className="opening__vignette" />
-    <div className="opening__monogram">A <i>&</i> A</div>
-    <div className="opening__copy">
-      <p className="opening__eyebrow">The wedding celebration of</p>
-      <h2>Aarav <i>&</i> Ananya</h2>
-      <p className="opening__date">14 · February · 2027</p>
-    </div>
-    <button className="open-invite" onClick={onOpen} aria-label="Open Aarav and Ananya's invitation">
-      <span>Open invitation</span><i>→</i>
-    </button>
-  </motion.div>
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef(null)
+
+  const handleStart = () => {
+    if (isPlaying) return
+    setIsPlaying(true)
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0
+      videoRef.current.muted = true
+      const playPromise = videoRef.current.play()
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.warn('Playback attempt:', err)
+          if (videoRef.current) {
+            videoRef.current.play().catch(() => onOpen())
+          }
+        })
+      }
+    }
+  }
+
+  return (
+    <motion.div
+      className={`opening opening--cinematic ${isPlaying ? 'is-playing' : ''}`}
+      exit={{opacity: 0, scale: 1.035, filter: 'blur(8px)'}}
+      transition={{duration: 1.05, ease: [.76, 0, .24, 1]}}
+      onClick={handleStart}
+      style={{cursor: isPlaying ? 'default' : 'pointer'}}
+    >
+      <video
+        ref={videoRef}
+        className="opening__video"
+        src="/assets/sm.mp4"
+        playsInline
+        muted
+        autoPlay={false}
+        preload="auto"
+        onEnded={onOpen}
+        style={{
+          opacity: isPlaying ? 1 : 0,
+          transition: 'opacity 0.4s ease'
+        }}
+      />
+      <img
+        src="/assets/flow-first-frame.webp"
+        alt="A flower-filled wedding pavilion with closed green silk curtains"
+        style={{
+          opacity: isPlaying ? 0 : 1,
+          transition: 'opacity 0.4s ease',
+          pointerEvents: 'none'
+        }}
+      />
+      <div className="opening__vignette" style={{opacity: isPlaying ? 0.3 : 1}} />
+
+      <AnimatePresence>
+        {!isPlaying && (
+          <motion.div
+            className="opening__ui"
+            initial={{opacity: 1}}
+            exit={{opacity: 0, transition: {duration: 0.4}}}
+          >
+            <div className="opening__copy">
+              <p className="opening__eyebrow">The wedding celebration of</p>
+              <h2>
+                <span>Aarav</span>
+                <i>&</i>
+                <span>Ananya</span>
+              </h2>
+              <p className="opening__date">14 · February · 2027</p>
+            </div>
+
+            <div className="opening__center-action" aria-label="Tap to open invitation">
+              <div className="opening__ring-pulse" />
+              <div className="opening__center-circle" />
+              <span className="opening__tap-hint">Tap to open</span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {isPlaying && (
+        <motion.button
+          className="opening__skip"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{delay: 1.2, duration: 0.4}}
+          onClick={(e) => {
+            e.stopPropagation()
+            onOpen()
+          }}
+          aria-label="Skip to invitation"
+        >
+          Skip <i>→</i>
+        </motion.button>
+      )}
+    </motion.div>
+  )
 }
 
 function Countdown() {
@@ -80,12 +164,24 @@ function App(){
   const artY=useTransform(scrollYProgress,[0,1],['0%','14%'])
   const textY=useTransform(scrollYProgress,[0,1],['0%','32%'])
   const petals=useMemo(()=>Array.from({length:16},(_,i)=>({id:i,left:(i*37)%94,delay:(i%6)*.14,rot:(i*53)%180})),[])
+
+  useEffect(() => {
+    if (!opened) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [opened])
+
   return <main>
     <LivingDetails/>
     {opened&&<FloatingLayer/>}
     <AnimatePresence>{!opened&&<Opening onOpen={()=>setOpened(true)} />}</AnimatePresence>
     <section className="hero" ref={hero}>
-      <motion.img style={reduce?{}:{y:artY}} className="hero__art" src="/assets/aarav-ananya-hero.png" alt="Illustration of Aarav and Ananya celebrating their haldi ceremony beneath banana leaves and bougainvillea" />
+      <motion.img style={reduce?{}:{y:artY}} className="hero__art" src="/assets/aarav-ananya-hero.webp" alt="Illustration of Aarav and Ananya celebrating their haldi ceremony beneath banana leaves and bougainvillea" />
       <div className="hero__shade" />
       <motion.div className="hero__copy" style={reduce?{}:{y:textY}} initial={{opacity:0}} animate={{opacity:opened?1:0}} transition={{delay:.25,duration:.9}}>
         <p className="eyebrow">Together with our families</p>
@@ -104,7 +200,7 @@ function App(){
     <section className="story section botanical" id="story">
       <div className="leaf leaf--left" aria-hidden="true" />
       <Reveal className="story__inner"><Lotus/><p className="kicker">Our story</p><h2>Two paths,<br/><em>one beautiful promise</em></h2><p>From a rain-soaked first hello in Bengaluru to countless cups of filter coffee, our story has always felt like coming home. With the blessings of our families, we invite you to witness the next chapter.</p><div className="signature">Aarav <i>&</i> Ananya</div></Reveal>
-      <Reveal className="story__portrait"><img loading="lazy" src="/assets/aarav-ananya-story.png" alt="Aarav and Ananya sharing a quiet floral ritual together"/><span>From the first coffee<br/>to forever</span></Reveal>
+      <Reveal className="story__portrait"><img loading="lazy" src="/assets/aarav-ananya-story.webp" alt="Aarav and Ananya sharing a quiet floral ritual together"/><span>From the first coffee<br/>to forever</span></Reveal>
     </section>
 
     <section className="events section" id="events">
@@ -123,7 +219,7 @@ function App(){
     </section>
 
     <footer>
-      <img loading="lazy" src="/assets/aarav-ananya-hero.png" alt="" />
+      <img loading="lazy" src="/assets/aarav-ananya-hero.webp" alt="" />
       <div className="footer__shade"/><Reveal className="footer__copy"><p className="script">With love</p><h2>Aarav <i>&</i> Ananya</h2><p>We cannot wait to celebrate with you.</p><Lotus/></Reveal>
       <a href="https://www.instagram.com/invitestory.in/" target="_blank" rel="noreferrer" style={{position:'relative',zIndex:2,display:'block',textAlign:'center',fontSize:'8px',textTransform:'uppercase',letterSpacing:'.18em',color:'rgba(255,248,223,.35)',textDecoration:'none',paddingBottom:'16px'}}>Follow @invitestory.in on Instagram</a>
     </footer>

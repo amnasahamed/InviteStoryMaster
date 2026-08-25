@@ -33,12 +33,10 @@ export function SectionHeading({
   title: string;
 }) {
   return (
-    <Reveal className="mb-10 flex flex-col items-center gap-3 text-center">
-      <h2 className="font-display text-4xl text-pearl sm:text-5xl">{title}</h2>
-      <span className="font-display text-base italic text-lotus-light/80">
-        {kicker}
-      </span>
-      <div className="hairline-gold w-40" />
+    <Reveal className="section-heading">
+      <span className="section-kicker">{kicker}</span>
+      <h2>{title}</h2>
+      <span className="section-rule" aria-hidden />
     </Reveal>
   );
 }
