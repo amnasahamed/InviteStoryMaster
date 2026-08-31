@@ -35,7 +35,7 @@ export function Opener({ onOpen }: { onOpen: () => void }) {
           <div
             className="pointer-events-none absolute inset-0 opacity-20"
             style={{
-              backgroundImage: "url('/images/mandala-texture.jpg')",
+              backgroundImage: "url('https://media.invitestory.in/kerala-sands/images/mandala-texture.jpg')",
               backgroundSize: "cover",
               backgroundPosition: dir === -1 ? "right center" : "left center",
             }}

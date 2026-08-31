@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Heart } from "lucide-react";
-import sunset from "@/assets/sunset-sky.jpg";
-import lanternImg from "@/assets/lantern.png";
+const sunset = "https://media.invitestory.in/ever-after-bloom/src/assets/sunset-sky.jpg";
+const lanternImg = "https://media.invitestory.in/ever-after-bloom/src/assets/lantern.png";
 import { invitation } from "@/content/invitation";
 import { LanternField } from "./LanternField";
 import { Ornament } from "./Reveal";

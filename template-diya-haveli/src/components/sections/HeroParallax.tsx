@@ -2,11 +2,11 @@ import { useRef } from "react";
 
 import { gsap } from "gsap";
 
-import frameAsset from "@/assets/last_frame.jpeg.asset.json";
+import frameAsset from "@/assetshttps://media.invitestory.in/diya-haveli/last_frame.jpeg.asset.json";
 import { useGSAP, useMotionOk } from "@/lib/motion";
 
 /**
- * Two stacked images of `last_frame.jpeg` translating in opposite directions
+ * Two stacked images of `https://media.invitestory.in/diya-haveli/last_frame.jpeg` translating in opposite directions
  * as the user scrolls. Adds depth without breaking the existing aesthetic.
  * The bottom layer is at 25 % opacity so the layered effect stays subtle.
  *

@@ -9,10 +9,10 @@ export function Footer() {
       <Aurora />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[url('/images/paper-texture.jpg')] bg-cover bg-center opacity-25"
+        className="pointer-events-none absolute inset-0 bg-[url('https://media.invitestory.in/noor-e-zahra/images/paper-texture.jpg')] bg-cover bg-center opacity-25"
       />
       <img
-        src="/images/mandala.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/mandala.png"
         alt=""
         aria-hidden
         loading="lazy"

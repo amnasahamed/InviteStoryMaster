@@ -33,7 +33,7 @@ export function SectionTitle({ eyebrow, title }: { eyebrow: string; title: strin
         {title}
       </h2>
       <img
-        src="/images/gold-flourish.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/gold-flourish.png"
         alt=""
         aria-hidden
         loading="lazy"

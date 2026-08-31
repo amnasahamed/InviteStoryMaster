@@ -75,7 +75,7 @@ export default function Hero() {
         style={layers.bg}
       >
         <img
-          src="./assets/layers/layer-01-background.png"
+          src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-01-background.png"
           alt=""
           className="h-full w-full object-cover opacity-90"
           draggable={false}
@@ -107,7 +107,7 @@ export default function Hero() {
           style={layers.shadows}
         >
           <img
-            src="./assets/layers/layer-02-shadows.png"
+            src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-02-shadows.png"
             alt=""
             className="absolute bottom-0 left-1/2 h-[65%] w-auto max-w-none -translate-x-1/2 object-contain opacity-45"
             draggable={false}
@@ -123,7 +123,7 @@ export default function Hero() {
           transition={{ delay: 0.55, duration: 1.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <img
-            src="./assets/layers/layer-03-groom.png"
+            src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-03-groom.png"
             alt=""
             className="absolute bottom-[1%] left-1/2 h-[92%] w-auto max-w-none -translate-x-[54%] object-contain opacity-[0.14] blur-[0.4px]"
             draggable={false}
@@ -139,7 +139,7 @@ export default function Hero() {
           transition={{ delay: 0.7, duration: 1.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <img
-            src="./assets/layers/layer-04-bride.png"
+            src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-04-bride.png"
             alt=""
             className="absolute bottom-[1%] left-1/2 h-[92%] w-auto max-w-none -translate-x-[44%] object-contain opacity-[0.12] blur-[0.4px]"
             draggable={false}
@@ -156,7 +156,7 @@ export default function Hero() {
         >
           <div className="absolute bottom-0 left-1/2 h-[96%] w-[92%] max-w-[92%] -translate-x-1/2">
             <img
-              src="./assets/layers/layer-couple.png"
+              src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-couple.png"
               alt={`${wedding.brideFull} and ${wedding.groomFull}`}
               className="h-full w-full object-contain drop-shadow-[0_28px_50px_rgba(60,45,30,0.16)]"
               style={{ animation: "waltz-sway-inner 7.5s ease-in-out infinite" }}
@@ -169,9 +169,9 @@ export default function Hero() {
               }`}
               style={{
                 maskImage:
-                  "url(./assets/layers/layer-couple.png)",
+                  "url(.https://media.invitestory.in/ivory-waltz/assets/layers/layer-couple.png)",
                 WebkitMaskImage:
-                  "url(./assets/layers/layer-couple.png)",
+                  "url(.https://media.invitestory.in/ivory-waltz/assets/layers/layer-couple.png)",
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",
@@ -201,7 +201,7 @@ export default function Hero() {
           transition={{ delay: 1.1, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <img
-            src="./assets/layers/layer-05-bouquet.png"
+            src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-05-bouquet.png"
             alt=""
             className="absolute bottom-[16%] right-[-2%] w-[28%] max-w-[120px] opacity-95 drop-shadow-[0_12px_24px_rgba(40,30,20,0.18)]"
             style={{ animation: "pearl-drift 5.8s ease-in-out infinite" }}

@@ -1,4 +1,4 @@
-import garland from "@/assets/garland.png";
+const garland = "https://media.invitestory.in/rajwada-royale-alt/src/assets/garland.png";
 import { invitation } from "@/config/invitation";
 import { Reveal } from "./Reveal";
 

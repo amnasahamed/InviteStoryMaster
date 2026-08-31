@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
-import hall from "@/assets/hall.png";
-import coverImg from "@/assets/cover.png";
-import introVideo from "@/assets/intro.mp4";
-import coupleVideo from "@/assets/couple.mp4";
-import divider from "@/assets/divider.png";
-import floral from "@/assets/floral.png";
+const hall = "https://media.invitestory.in/gilded-hall/src/assets/hall.png";
+const coverImg = "https://media.invitestory.in/gilded-hall/src/assets/cover.png";
+const introVideo = "https://media.invitestory.in/gilded-hall/src/assets/intro.mp4";
+const coupleVideo = "https://media.invitestory.in/gilded-hall/src/assets/couple.mp4";
+const divider = "https://media.invitestory.in/gilded-hall/src/assets/divider.png";
+const floral = "https://media.invitestory.in/gilded-hall/src/assets/floral.png";
 import { LightRain } from "@/components/invite/LightRain";
 import { Countdown } from "@/components/invite/Countdown";
 import { StoryCountdownCard } from "@/components/invite/StoryCountdownCard";

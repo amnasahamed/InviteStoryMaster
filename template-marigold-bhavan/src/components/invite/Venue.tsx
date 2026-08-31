@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import mapImg from "@/assets/map.jpg";
+const mapImg = "https://media.invitestory.in/marigold-bhavan/src/assets/map.jpg";
 import { directionsUrl, invite, mapsUrl } from "@/config/invite";
 import { Divider } from "./Divider";
 import { Reveal } from "./Reveal";

@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 import { SlideToAnswer } from "@/components/SlideToAnswer";
 import { Petals } from "@/components/Petals";
-import wallpaper from "@/assets/wedding-lockscreen.jpg";
-import couple from "@/assets/couple-avatar.jpg";
-import ornament from "@/assets/ornament-divider.jpg";
+const wallpaper = "https://media.invitestory.in/slide-to-shaadi/src/assets/wedding-lockscreen.jpg";
+const couple = "https://media.invitestory.in/slide-to-shaadi/src/assets/couple-avatar.jpg";
+const ornament = "https://media.invitestory.in/slide-to-shaadi/src/assets/ornament-divider.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

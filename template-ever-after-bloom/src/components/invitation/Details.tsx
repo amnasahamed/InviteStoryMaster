@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CalendarPlus, Clock, MapPin, Shirt, Sparkles } from "lucide-react";
-import mapPlate from "@/assets/map-plate.jpg";
-import car from "@/assets/wedding-car.png";
+const mapPlate = "https://media.invitestory.in/ever-after-bloom/src/assets/map-plate.jpg";
+const car = "https://media.invitestory.in/ever-after-bloom/src/assets/wedding-car.png";
 import { invitation } from "@/content/invitation";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 

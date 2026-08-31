@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import poster from "@/assets/opener-frames/lantern-reveal-first.png";
+const poster = "https://media.invitestory.in/seashell-vows/src/assets/opener-frames/lantern-reveal-first.png";
 
 const SESSION_KEY = "everlasting-vows-opened";
 
@@ -50,7 +50,7 @@ export function InvitationOpener() {
     >
       <video
         ref={videoRef}
-        src="/media/wedding-opener.mp4"
+        src="https://media.invitestory.in/seashell-vows/media/wedding-opener.mp4"
         poster={poster}
         preload="auto"
         playsInline

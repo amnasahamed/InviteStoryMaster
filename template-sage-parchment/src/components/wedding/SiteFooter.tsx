@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import footerFloral from "@/assets/footer-floral.jpg";
+const footerFloral = "https://media.invitestory.in/sage-parchment/src/assets/footer-floral.jpg";
 import { invitation } from "@/config/invitation";
 import { Reveal } from "./Reveal";
 

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useRef } from "react";
-import footerBg from "@/assets/footer-bg.jpg";
+const footerBg = "https://media.invitestory.in/marigold-bhavan/src/assets/footer-bg.jpg";
 import { invite } from "@/config/invite";
 import { useParallax } from "@/hooks/use-parallax";
 import { ScriptNames } from "./Reveal";

@@ -20,7 +20,7 @@ export default function Footer() {
     <footer className="relative flex min-h-[70svh] flex-col justify-end overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-dusk-deep via-[#061b20] to-[#031216]" />
       <img
-        src="./assets/hero-lakeview-teal-v1.png"
+        src=".https://media.invitestory.in/lakeview-lanterns/assets/hero-lakeview-teal-v1.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-40"
       />

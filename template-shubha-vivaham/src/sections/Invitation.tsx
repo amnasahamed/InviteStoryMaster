@@ -203,7 +203,7 @@ export default function Invitation() {
   return (
     <section className="relative overflow-hidden py-20 sm:py-28 px-6">
       <img
-        src="assets/bg-texture.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/bg-texture.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-60"
       />

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import doorPanel from "@/assets/door-panel.png";
+const doorPanel = "https://media.invitestory.in/rajwada-royale-alt/src/assets/door-panel.png";
 import { invitation } from "@/config/invitation";
 
 type Props = {

@@ -14,7 +14,7 @@ export default function Events() {
         className="pointer-events-none absolute -left-10 top-24 opacity-[0.06]"
       >
         <img
-          src="./assets/layers/layer-couple.png"
+          src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-couple.png"
           alt=""
           className="w-56 -scale-x-100 sm:w-72"
         />

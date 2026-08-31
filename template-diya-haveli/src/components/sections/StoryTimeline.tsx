@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 
-import beginningImage from "@/assets/story-beginning.jpg";
-import firstMeetingImage from "@/assets/story-first-meeting.jpg";
-import questionImage from "@/assets/story-question.jpg";
+const beginningImage = "https://media.invitestory.in/diya-haveli/src/assets/story-beginning.jpg";
+const firstMeetingImage = "https://media.invitestory.in/diya-haveli/src/assets/story-first-meeting.jpg";
+const questionImage = "https://media.invitestory.in/diya-haveli/src/assets/story-question.jpg";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { ScrollTrigger, useGSAP, useMotionOk } from "@/lib/motion";
 import { cn } from "@/lib/utils";

@@ -8,10 +8,10 @@ import { WeddingFooter } from "@/components/wedding/WeddingFooter";
 import { InvitationOpener } from "@/components/wedding/InvitationOpener";
 import { couple, events, venue, downloadICS } from "@/lib/wedding";
 import { useParallax } from "@/hooks/use-reveal";
-import floral from "@/assets/floral-spray.png";
+const floral = "https://media.invitestory.in/seashell-vows/src/assets/floral-spray.png";
 import mapImg from "@/assets/venue-map.jpg";
-import ringsVignette from "@/assets/rings-seashell-vignette.png";
-import floralDivider from "@/assets/bougainvillea-divider.png";
+const ringsVignette = "https://media.invitestory.in/seashell-vows/src/assets/rings-seashell-vignette.png";
+const floralDivider = "https://media.invitestory.in/seashell-vows/src/assets/bougainvillea-divider.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

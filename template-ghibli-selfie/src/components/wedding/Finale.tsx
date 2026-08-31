@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import coupleImg from "@/assets/couple.png";
+const coupleImg = "https://media.invitestory.in/ghibli-selfie/src/assets/couple.png";
 import { playShutter } from "./audio";
 import { burstPetals } from "./effects";
 import { useReveal } from "./useReveal";

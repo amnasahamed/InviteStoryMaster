@@ -70,7 +70,7 @@ export const invitation = {
     description:
       "Surya and Jayesh cordially invite you to celebrate their engagement on September 4, 2026 at SN Auditorium Olari, Thrissur, Kerala.",
     url: "https://surya-jayesh.vercel.app",
-    image: "https://surya-jayesh.vercel.app/og-image.jpg",
+    image: "https://surya-jayesh.vercel.apphttps://media.invitestory.in/sage-parchment/og-image.jpg",
     siteName: "Surya & Jayesh Engagement",
   },
 } as const;

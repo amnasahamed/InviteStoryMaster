@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import petals from "@/assets/petals.png";
+const petals = "https://media.invitestory.in/gilded-hall/src/assets/petals.png";
 
 const moments = [
   { id: "story", label: "Story" },

@@ -36,7 +36,7 @@ export function EventDetails() {
   return (
     <section className="relative overflow-hidden bg-ivory px-6 py-20">
       <img
-        src="/images/swirl-band.png"
+        src="https://media.invitestory.in/royal-reception/images/swirl-band.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -100,7 +100,7 @@ export function EventDetails() {
           <div className="overflow-hidden rounded-[1.75rem] border border-accent/30 bg-card shadow-[0_20px_50px_-28px_rgba(20,50,140,0.45)]">
             <div className="relative">
               <img
-                src="/images/map-preview.jpg"
+                src="https://media.invitestory.in/royal-reception/images/map-preview.jpg"
                 alt={`Map showing ${wedding.venue}`}
                 width={1024}
                 height={768}

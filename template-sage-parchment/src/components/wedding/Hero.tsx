@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import heroArch from "@/assets/hero-arch.jpg";
+const heroArch = "https://media.invitestory.in/sage-parchment/src/assets/hero-arch.jpg";
 import { invitation } from "@/config/invitation";
 import { AuroraBackdrop } from "./AuroraBackdrop";
 import { useOpened } from "./OpenGate";

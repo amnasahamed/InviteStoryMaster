@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { X } from "lucide-react";
-import heroArch from "@/assets/hero-arch.jpg";
-import story1 from "@/assets/story-1.jpg";
-import story2 from "@/assets/story-2.jpg";
-import story3 from "@/assets/story-3.jpg";
+const heroArch = "https://media.invitestory.in/sage-parchment/src/assets/hero-arch.jpg";
+const story1 = "https://media.invitestory.in/sage-parchment/src/assets/story-1.jpg";
+const story2 = "https://media.invitestory.in/sage-parchment/src/assets/story-2.jpg";
+const story3 = "https://media.invitestory.in/sage-parchment/src/assets/story-3.jpg";
 import { Reveal } from "./Reveal";
 
 const PHOTOS = [

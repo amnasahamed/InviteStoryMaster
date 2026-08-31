@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="relative flex min-h-[100svh] flex-col items-center justify-end overflow-hidden bg-ocean-deep select-none">
       {/* Background illustration */}
       <img
-        src="/op-hero-ship.png"
+        src="https://media.invitestory.in/grand-line-voyage/op-hero-ship.png"
         alt={`Illustration of ${wedding.bride.name} and ${wedding.groom.name} in Indian wedding attire sailing a grand ship`}
         width={1280}
         height={1600}

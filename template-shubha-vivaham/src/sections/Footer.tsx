@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#6d1a2e] via-[#57152a] to-[#3d1020]" />
       {/* 2 — texture behind */}
       <img
-        src="assets/bg-texture.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/bg-texture.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-[0.14] mix-blend-luminosity"
       />
@@ -57,7 +57,7 @@ export default function Footer() {
 
       {/* 4 — static transparent PNG overlay on top of the text */}
       <img
-        src="assets/footer-overlay.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/footer-overlay.png"
         alt=""
         className="pointer-events-none absolute bottom-0 left-1/2 z-20 w-[150%] max-w-none -translate-x-1/2 sm:w-[110%]"
       />

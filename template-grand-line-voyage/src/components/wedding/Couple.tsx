@@ -71,7 +71,7 @@ function BountyPanel({
         {/* Bounty Strip */}
         <div className="mt-3 flex items-center justify-center gap-1.5 rounded-lg border-y-2 border-[oklch(0.38_0.09_52)]/40 bg-[oklch(0.88_0.06_78)]/50 py-1.5 shadow-sm">
           <img
-            src="/op-coin.png"
+            src="https://media.invitestory.in/grand-line-voyage/op-coin.png"
             alt=""
             width={512}
             height={512}
@@ -108,7 +108,7 @@ export default function Couple() {
           <figure className="group overflow-hidden rounded-3xl border-2 border-gold/40 shadow-[0_24px_50px_-20px_black] transition-all duration-300 hover:border-gold">
             <div className="overflow-hidden">
               <img
-                src="/op-couple-panel.png"
+                src="https://media.invitestory.in/grand-line-voyage/op-couple-panel.png"
                 alt="The couple holding hands on a floating temple ship at sunset"
                 width={1152}
                 height={896}

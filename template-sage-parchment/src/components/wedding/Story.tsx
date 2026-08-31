@@ -1,6 +1,6 @@
-import story1 from "@/assets/story-1.jpg";
-import story2 from "@/assets/story-2.jpg";
-import story3 from "@/assets/story-3.jpg";
+const story1 = "https://media.invitestory.in/sage-parchment/src/assets/story-1.jpg";
+const story2 = "https://media.invitestory.in/sage-parchment/src/assets/story-2.jpg";
+const story3 = "https://media.invitestory.in/sage-parchment/src/assets/story-3.jpg";
 import { invitation } from "@/config/invitation";
 import { Reveal } from "./Reveal";
 

@@ -22,7 +22,7 @@ export default function CoverGate({ visible, onBegin, onSkip }: Props) {
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
       <img
-        src="./assets/layers/cover-welcome.png"
+        src=".https://media.invitestory.in/ganesha-gopuram/assets/layers/cover-welcome.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover object-center"
         draggable={false}

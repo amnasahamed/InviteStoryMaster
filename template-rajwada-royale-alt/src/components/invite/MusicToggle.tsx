@@ -2,7 +2,7 @@ import { Music, Pause } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-const TRACK = "/audio/ambient-shehnai.mp3";
+const TRACK = "https://media.invitestory.in/rajwada-royale-alt/audio/ambient-shehnai.mp3";
 
 /** Floating ambient-music control. Starts only after the guest opens the doors. */
 export function MusicToggle({ started }: { started: boolean }) {

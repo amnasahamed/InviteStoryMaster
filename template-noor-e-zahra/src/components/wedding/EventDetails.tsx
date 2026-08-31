@@ -7,7 +7,7 @@ export function EventDetails() {
   return (
     <section className="relative overflow-hidden px-6 py-16">
       <img
-        src="/images/masjid.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/masjid.png"
         alt=""
         aria-hidden
         loading="lazy"

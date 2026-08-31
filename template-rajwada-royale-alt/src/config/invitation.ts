@@ -3,13 +3,13 @@
  * To reuse this template for a new couple, edit ONLY this file.
  */
 
-import storyOne from "@/assets/story-1.jpg";
-import storyTwo from "@/assets/story-2.jpg";
-import storyThree from "@/assets/story-3.jpg";
-import galleryOne from "@/assets/gallery-1.jpg";
-import galleryTwo from "@/assets/gallery-2.jpg";
-import galleryThree from "@/assets/gallery-3.jpg";
-import galleryFour from "@/assets/gallery-4.jpg";
+const storyOne = "https://media.invitestory.in/rajwada-royale-alt/src/assets/story-1.jpg";
+const storyTwo = "https://media.invitestory.in/rajwada-royale-alt/src/assets/story-2.jpg";
+const storyThree = "https://media.invitestory.in/rajwada-royale-alt/src/assets/story-3.jpg";
+const galleryOne = "https://media.invitestory.in/rajwada-royale-alt/src/assets/gallery-1.jpg";
+const galleryTwo = "https://media.invitestory.in/rajwada-royale-alt/src/assets/gallery-2.jpg";
+const galleryThree = "https://media.invitestory.in/rajwada-royale-alt/src/assets/gallery-3.jpg";
+const galleryFour = "https://media.invitestory.in/rajwada-royale-alt/src/assets/gallery-4.jpg";
 
 export type InviteEvent = {
   key: string;

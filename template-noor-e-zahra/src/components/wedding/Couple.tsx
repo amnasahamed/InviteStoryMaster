@@ -53,7 +53,7 @@ export function Couple() {
   return (
     <section className="relative overflow-hidden px-6 py-20">
       <img
-        src="/images/mandala.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/mandala.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -66,7 +66,7 @@ export function Couple() {
 
         <div className="mt-12 grid gap-14">
           <Portrait
-            src="/images/bride.jpg"
+            src="https://media.invitestory.in/noor-e-zahra/images/bride.jpg"
             role="The Bride"
             name={`${WEDDING.bride.first} ${WEDDING.bride.last}`}
             script={WEDDING.bride.script}
@@ -74,7 +74,7 @@ export function Couple() {
             delay={0.05}
           />
           <Portrait
-            src="/images/groom.jpg"
+            src="https://media.invitestory.in/noor-e-zahra/images/groom.jpg"
             role="The Groom"
             name={`${WEDDING.groom.first} ${WEDDING.groom.last}`}
             script={WEDDING.groom.script}

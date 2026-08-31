@@ -29,7 +29,7 @@ export const WEDDING = {
       subtitle: 'A chance meeting at Marine Drive',
       description: 'Amidst the Arabian sea breeze and monsoon drizzles, a shared cup of spiced cutting chai turned into an unforgettable four-hour conversation about art, dreams, and family.',
       icon: '✨',
-      image: '/assets/event_mehendi.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_mehendi.jpg',
     },
     {
       year: '2024',
@@ -37,7 +37,7 @@ export const WEDDING = {
       subtitle: 'A sunset boat ride in Udaipur',
       description: 'With the silhouettes of Jag Mandir reflecting upon the shimmering amber waters and Shehnai melodies floating from the shore, Aarav went down on one knee with a ring carved in rose gold.',
       icon: '💍',
-      image: '/assets/hero_twilight.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/hero_twilight.jpg',
     },
     {
       year: '2026',
@@ -45,7 +45,7 @@ export const WEDDING = {
       subtitle: 'Where their story enters forever',
       description: 'Returning to the sacred waters of Lake Pichola to tie their destinies with Vedic chants, royal feasts, and the blessings of everyone they hold dear.',
       icon: '🪔',
-      image: '/assets/event_vivah.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_vivah.jpg',
     },
   ],
   events: [
@@ -59,7 +59,7 @@ export const WEDDING = {
       venue: 'The Lakeside Courtyard, Royal Palms',
       dressCode: 'Vibrant Florals & Pastel Heritage',
       icon: '🌿',
-      image: '/assets/event_mehendi.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_mehendi.jpg',
       tag: 'Celebration of Henna & Folk Beats',
       description: 'An afternoon of intricate bridal henna, traditional Rajasthani Ghoomar folk performances, artisanal street delicacies, and royal high tea overlooking the calm waters.',
       colors: [
@@ -79,7 +79,7 @@ export const WEDDING = {
       venue: 'Grand Pichola Ballroom & Terraces',
       dressCode: 'Glamour, Shimmer & Indo-Western',
       icon: '🎶',
-      image: '/assets/event_sangeet.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_sangeet.jpg',
       tag: 'Music, Dance & Champagne',
       description: 'A dazzling night of high-energy family dance battles, live Bollywood fusion band, celebratory cocktails, and culinary masterpieces under the starlit sky.',
       colors: [
@@ -99,7 +99,7 @@ export const WEDDING = {
       venue: 'The Palatial Mandap Terrace',
       dressCode: 'Royal Traditional Heritage',
       icon: '💍',
-      image: '/assets/event_vivah.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_vivah.jpg',
       tag: 'Sacred Vows & Sunset Pheras',
       description: 'Witness the grand royal Baraat procession followed by the sacred seven vows (Saat Phere) around the holy fire as twilight paints Lake Pichola in gold.',
       colors: [
@@ -119,7 +119,7 @@ export const WEDDING = {
       venue: 'The Royal Palace Lawns',
       dressCode: 'Black Tie / Royal Formal',
       icon: '🥂',
-      image: '/assets/event_reception.jpg',
+      image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_reception.jpg',
       tag: 'Gala Dinner & Live Symphony',
       description: 'An enchanting evening of fine multi-course dining, royal toasts, cake cutting ceremony, and live symphony orchestral performances to honor the newlyweds.',
       colors: [
@@ -131,12 +131,12 @@ export const WEDDING = {
     },
   ],
   gallery: [
-    { title: 'Sunset Mandap at Pichola', image: '/assets/event_vivah.jpg', tag: 'Sacred Vivah' },
-    { title: 'The Royal Grand Reception', image: '/assets/event_reception.jpg', tag: 'Gala Evening' },
-    { title: 'Sangeet Under the Stars', image: '/assets/event_sangeet.jpg', tag: 'Sangeet Royale' },
-    { title: 'Lakeside Mehendi Courtyard', image: '/assets/event_mehendi.jpg', tag: 'Mehendi & High Tea' },
-    { title: 'Lake Pichola Royal Palace', image: '/assets/hero_twilight.jpg', tag: 'Palatial Heritage' },
-    { title: 'Aarav & Ananya Portrait', image: '/assets/royal-couple.jpg', tag: 'Royal Couple' },
+    { title: 'Sunset Mandap at Pichola', image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_vivah.jpg', tag: 'Sacred Vivah' },
+    { title: 'The Royal Grand Reception', image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_reception.jpg', tag: 'Gala Evening' },
+    { title: 'Sangeet Under the Stars', image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_sangeet.jpg', tag: 'Sangeet Royale' },
+    { title: 'Lakeside Mehendi Courtyard', image: 'https://media.invitestory.in/lake-pichola-royal/assets/event_mehendi.jpg', tag: 'Mehendi & High Tea' },
+    { title: 'Lake Pichola Royal Palace', image: 'https://media.invitestory.in/lake-pichola-royal/assets/hero_twilight.jpg', tag: 'Palatial Heritage' },
+    { title: 'Aarav & Ananya Portrait', image: 'https://media.invitestory.in/lake-pichola-royal/assets/royal-couple.jpg', tag: 'Royal Couple' },
   ],
   hospitality: {
     airport: 'Maharana Pratap Airport (UDR) — 28 km / 45 min drive',

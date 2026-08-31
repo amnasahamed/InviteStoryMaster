@@ -1,5 +1,5 @@
-import bouquet from "@/assets/bouquet.png";
-import butterfly from "@/assets/butterfly.png";
+const bouquet = "https://media.invitestory.in/ghibli-selfie/src/assets/bouquet.png";
+const butterfly = "https://media.invitestory.in/ghibli-selfie/src/assets/butterfly.png";
 import { burstPetals } from "./effects";
 import { useReveal } from "./useReveal";
 

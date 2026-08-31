@@ -12,7 +12,7 @@ export default function InviteMessage() {
       {/* Soft floating bouquet watermark */}
       <ParallaxBlock speed={0.22} className="pointer-events-none absolute -right-8 top-10 opacity-[0.07] sm:right-8">
         <img
-          src="./assets/layers/layer-05-bouquet.png"
+          src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-05-bouquet.png"
           alt=""
           className="w-40 rotate-12 sm:w-52"
         />

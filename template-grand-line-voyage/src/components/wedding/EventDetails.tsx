@@ -118,7 +118,7 @@ export default function EventDetails() {
                 className="font-display h-12 gap-2.5 rounded-xl border border-gold/60 bg-gradient-to-b from-[oklch(0.6_0.19_35)] to-[oklch(0.45_0.17_32)] text-xs tracking-wider text-parchment uppercase shadow-[0_4px_14px_rgba(0,0,0,0.5)] hover:brightness-110 active:scale-95 transition-all"
               >
                 <motion.img
-                  src="/op-log-pose.png"
+                  src="https://media.invitestory.in/grand-line-voyage/op-log-pose.png"
                   alt=""
                   width={512}
                   height={512}
@@ -148,7 +148,7 @@ export default function EventDetails() {
           <div className="relative overflow-hidden rounded-3xl border-2 border-gold/40 shadow-[0_24px_50px_-20px_black] bg-ocean-deep">
             <div className="relative">
               <img
-                src="/op-map.png"
+                src="https://media.invitestory.in/grand-line-voyage/op-map-v1.png"
                 alt="Grand Line style treasure map showing the route to the wedding venue"
                 width={1280}
                 height={896}

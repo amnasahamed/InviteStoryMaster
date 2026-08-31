@@ -26,7 +26,7 @@ export default function Footer() {
         className="pointer-events-none absolute inset-x-0 bottom-0 top-8 opacity-[0.08]"
       >
         <img
-          src="./assets/layers/layer-couple.png"
+          src=".https://media.invitestory.in/ivory-waltz/assets/layers/layer-couple.png"
           alt=""
           className="mx-auto h-full max-w-md object-contain object-bottom"
         />

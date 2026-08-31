@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import palaceImage from "@/assets/palace-courtyard.jpg";
+const palaceImage = "https://media.invitestory.in/diya-haveli/src/assets/palace-courtyard.jpg";
 
 export function PalaceReveal() {
   const ref = useRef<HTMLElement>(null);

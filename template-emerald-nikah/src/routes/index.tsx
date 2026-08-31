@@ -106,7 +106,7 @@ function Hero() {
     >
       {/* Background Image with Deep Velvet Emerald Veil */}
       <img
-        src="/images/hero-bg.jpg"
+        src="https://media.invitestory.in/emerald-nikah/images/hero-bg.jpg"
         alt=""
         aria-hidden
         width={1024}
@@ -118,7 +118,7 @@ function Hero() {
 
       {/* Floating Velvet Roses & Floral Accents */}
       <img
-        src="/images/roses.png"
+        src="https://media.invitestory.in/emerald-nikah/images/roses.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -127,7 +127,7 @@ function Hero() {
         className="float-slow pointer-events-none absolute -left-12 -top-6 w-52 opacity-95 drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)] sm:w-72"
       />
       <img
-        src="/images/daisies.png"
+        src="https://media.invitestory.in/emerald-nikah/images/daisies.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -297,13 +297,13 @@ function QuranicVerse() {
 function Couple() {
   const people = [
     {
-      img: "/images/groom.jpg",
+      img: "https://media.invitestory.in/emerald-nikah/images/groom.jpg",
       name: "Zayan Abdul Rahman",
       role: "The Groom",
       note: "An architect with a gentle soul, thoughtful heart, and deep devotion to family and faith.",
     },
     {
-      img: "/images/bride.jpg",
+      img: "https://media.invitestory.in/emerald-nikah/images/bride.jpg",
       name: "Inaya Fathima",
       role: "The Bride",
       note: "Radiant with grace and warmth, a doctor whose kindness and infectious joy brighten every room.",
@@ -365,7 +365,7 @@ function CountdownSection() {
   return (
     <section className="relative overflow-hidden px-6 py-20">
       <img
-        src="/images/mandala.png"
+        src="https://media.invitestory.in/emerald-nikah/images/mandala.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -478,7 +478,7 @@ function Details() {
         <div className="glass-tile overflow-hidden group">
           <div className="relative overflow-hidden h-48 w-full">
             <img
-              src="/images/map.jpg"
+              src="https://media.invitestory.in/emerald-nikah/images/map.jpg"
               alt="Falaknuma Gardens venue map"
               loading="lazy"
               width={1024}
@@ -520,7 +520,7 @@ function Footer() {
     <footer className="relative overflow-hidden px-6 pb-20 pt-20">
       <Aurora className="opacity-75" />
       <img
-        src="/images/mandala.png"
+        src="https://media.invitestory.in/emerald-nikah/images/mandala.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -529,7 +529,7 @@ function Footer() {
         className="pointer-events-none absolute -bottom-24 left-1/2 w-[160%] -translate-x-1/2 opacity-[0.14] spin-very-slow"
       />
       <img
-        src="/images/roses.png"
+        src="https://media.invitestory.in/emerald-nikah/images/roses.png"
         alt=""
         aria-hidden
         loading="lazy"
@@ -539,7 +539,7 @@ function Footer() {
       />
       <div className="relative mx-auto max-w-md text-center">
         <img
-          src="/images/divider.png"
+          src="https://media.invitestory.in/emerald-nikah/images/divider.png"
           alt=""
           aria-hidden
           loading="lazy"

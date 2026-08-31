@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import garden from "@/assets/garden-courtyard.jpg";
+const garden = "https://media.invitestory.in/ever-after-bloom/src/assets/garden-courtyard.jpg";
 import { invitation } from "@/content/invitation";
 import { Reveal, SectionTitle } from "./Reveal";
 

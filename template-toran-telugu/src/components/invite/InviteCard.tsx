@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { invite } from "@/lib/invite.config";
 import paper from "@/assets/paper-texture.jpg";
-import gopuram from "@/assets/gopuram.png";
+const gopuram = "https://media.invitestory.in/toran-telugu/src/assets/gopuram.png";
 import { Ornament, SmallDots } from "./Ornament";
 import { Reveal } from "./Reveal";
 import { clamp, isTouch, lerp, reducedMotion, useFrame } from "@/lib/frame";

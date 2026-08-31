@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
       {/* Layer 2 — ivory paper texture above aurora */}
       <img
-        src="assets/bg-texture.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/bg-texture.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-75"
       />
@@ -36,17 +36,17 @@ export default function Hero() {
         transition={{ duration: 1.1, ease: "easeOut" }}
         className="relative z-20 w-full"
       >
-        <img src="assets/toran-top.png" alt="" className="animate-sway block w-full" />
+        <img src="https://media.invitestory.in/shubha-vivaham/assets/toran-top.png" alt="" className="animate-sway block w-full" />
       </motion.div>
 
       {/* Banana leaves framing the bottom corners */}
       <img
-        src="assets/banana-leaves.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/banana-leaves.png"
         alt=""
         className="pointer-events-none absolute -bottom-3 -left-4 w-48 sm:w-72 z-10"
       />
       <img
-        src="assets/banana-leaves.png"
+        src="https://media.invitestory.in/shubha-vivaham/assets/banana-leaves.png"
         alt=""
         className="pointer-events-none absolute -bottom-3 -right-4 w-48 sm:w-72 -scale-x-100 z-10"
       />
@@ -80,7 +80,7 @@ export default function Hero() {
 
         {/* Couple illustration */}
         <motion.img
-          src="assets/couple.png"
+          src="https://media.invitestory.in/shubha-vivaham/assets/couple.png"
           alt={`${invite.brideFirst} and ${invite.groomFirst}`}
           variants={rise} initial="hidden" animate="show" custom={1.05}
           className="animate-float mt-3 w-72 sm:w-96 drop-shadow-[0_18px_24px_rgba(150,70,0,0.25)]"

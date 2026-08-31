@@ -9,7 +9,7 @@ export default function InviteMessage() {
         <span className="font-display text-base tracking-[0.3em] text-[#d9b36a]">
           {wedding.verse.hindi}
         </span>
-        <img src="/assets/mandala.png" alt="" className="w-16 opacity-70" />
+        <img src="https://media.invitestory.in/rajmahal-palace/assets/mandala.png" alt="" className="w-16 opacity-70" />
         <p className="font-display text-2xl italic leading-relaxed text-[#f3e7d3]/90">
           “{wedding.verse.text}”
         </p>

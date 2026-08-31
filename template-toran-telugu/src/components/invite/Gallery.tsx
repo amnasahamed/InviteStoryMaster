@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import c1 from "@/assets/couple-1.jpg";
-import c2 from "@/assets/couple-2.jpg";
-import c3 from "@/assets/couple-3.jpg";
-import c4 from "@/assets/couple-4.jpg";
+const c1 = "https://media.invitestory.in/toran-telugu/src/assets/couple-1.jpg";
+const c2 = "https://media.invitestory.in/toran-telugu/src/assets/couple-2.jpg";
+const c3 = "https://media.invitestory.in/toran-telugu/src/assets/couple-3.jpg";
+const c4 = "https://media.invitestory.in/toran-telugu/src/assets/couple-4.jpg";
 import { Reveal } from "./Reveal";
 import { Ornament } from "./Ornament";
 

@@ -56,7 +56,7 @@ function Chest({
       >
         <div className="relative mb-1">
           <img
-            src="/op-treasure-chest.png"
+            src="https://media.invitestory.in/grand-line-voyage/op-treasure-chest.png"
             alt=""
             width={768}
             height={768}
@@ -71,7 +71,7 @@ function Chest({
           </span>
         </div>
         <motion.img
-          src="/op-coin.png"
+          src="https://media.invitestory.in/grand-line-voyage/op-coin.png"
           alt=""
           width={512}
           height={512}

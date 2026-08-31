@@ -55,7 +55,7 @@ function Opening({onOpen}) {
       <video
         ref={videoRef}
         className="opening__video"
-        src="/assets/sm.mp4"
+        src="https://media.invitestory.in/lotus-leaf-bengaluru/assets/sm.mp4"
         playsInline
         muted
         autoPlay={false}
@@ -67,7 +67,7 @@ function Opening({onOpen}) {
         }}
       />
       <img
-        src="/assets/flow-first-frame.webp"
+        src="https://media.invitestory.in/lotus-leaf-bengaluru/assets/flow-first-frame.webp"
         alt="A flower-filled wedding pavilion with closed green silk curtains"
         style={{
           opacity: isPlaying ? 0 : 1,
@@ -181,7 +181,7 @@ function App(){
     {opened&&<FloatingLayer/>}
     <AnimatePresence>{!opened&&<Opening onOpen={()=>setOpened(true)} />}</AnimatePresence>
     <section className="hero" ref={hero}>
-      <motion.img style={reduce?{}:{y:artY}} className="hero__art" src="/assets/aarav-ananya-hero.webp" alt="Illustration of Aarav and Ananya celebrating their haldi ceremony beneath banana leaves and bougainvillea" />
+      <motion.img style={reduce?{}:{y:artY}} className="hero__art" src="https://media.invitestory.in/lotus-leaf-bengaluru/assets/aarav-ananya-hero.webp" alt="Illustration of Aarav and Ananya celebrating their haldi ceremony beneath banana leaves and bougainvillea" />
       <div className="hero__shade" />
       <motion.div className="hero__copy" style={reduce?{}:{y:textY}} initial={{opacity:0}} animate={{opacity:opened?1:0}} transition={{delay:.25,duration:.9}}>
         <p className="eyebrow">Together with our families</p>
@@ -200,7 +200,7 @@ function App(){
     <section className="story section botanical" id="story">
       <div className="leaf leaf--left" aria-hidden="true" />
       <Reveal className="story__inner"><Lotus/><p className="kicker">Our story</p><h2>Two paths,<br/><em>one beautiful promise</em></h2><p>From a rain-soaked first hello in Bengaluru to countless cups of filter coffee, our story has always felt like coming home. With the blessings of our families, we invite you to witness the next chapter.</p><div className="signature">Aarav <i>&</i> Ananya</div></Reveal>
-      <Reveal className="story__portrait"><img loading="lazy" src="/assets/aarav-ananya-story.webp" alt="Aarav and Ananya sharing a quiet floral ritual together"/><span>From the first coffee<br/>to forever</span></Reveal>
+      <Reveal className="story__portrait"><img loading="lazy" src="https://media.invitestory.in/lotus-leaf-bengaluru/assets/aarav-ananya-story.webp" alt="Aarav and Ananya sharing a quiet floral ritual together"/><span>From the first coffee<br/>to forever</span></Reveal>
     </section>
 
     <section className="events section" id="events">
@@ -219,7 +219,7 @@ function App(){
     </section>
 
     <footer>
-      <img loading="lazy" src="/assets/aarav-ananya-hero.webp" alt="" />
+      <img loading="lazy" src="https://media.invitestory.in/lotus-leaf-bengaluru/assets/aarav-ananya-hero.webp" alt="" />
       <div className="footer__shade"/><Reveal className="footer__copy"><p className="script">With love</p><h2>Aarav <i>&</i> Ananya</h2><p>We cannot wait to celebrate with you.</p><Lotus/></Reveal>
       <a href="https://www.instagram.com/invitestory.in/" target="_blank" rel="noreferrer" style={{position:'relative',zIndex:2,display:'block',textAlign:'center',fontSize:'8px',textTransform:'uppercase',letterSpacing:'.18em',color:'rgba(255,248,223,.35)',textDecoration:'none',paddingBottom:'16px'}}>Follow @invitestory.in on Instagram</a>
     </footer>

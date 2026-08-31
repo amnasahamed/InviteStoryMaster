@@ -6,7 +6,7 @@ export const wedding = {
     bounty: "1,500,000,000",
     intro:
       "Chartered every monsoon between Kochi and the Grand Line. Reads the stars, the tides and her fiance's terrible jokes with equal accuracy.",
-    image: "/op-bride.png",
+    image: "https://media.invitestory.in/grand-line-voyage/op-bride.png",
   },
   groom: {
     name: "Vikram",
@@ -15,7 +15,7 @@ export const wedding = {
     bounty: "1,500,000,001",
     intro:
       "Set sail from Hyderabad with one dream: to eat every biryani on every island \u2014 and to marry the girl who drew the map.",
-    image: "/op-groom.png",
+    image: "https://media.invitestory.in/grand-line-voyage/op-groom.png",
   },
   // ISO local time of the muhurat
   date: "2027-02-14T19:30:00",

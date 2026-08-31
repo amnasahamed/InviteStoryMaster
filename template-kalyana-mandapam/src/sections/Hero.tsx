@@ -24,7 +24,7 @@ export default function Hero() {
         className="pointer-events-none absolute left-0 right-0 top-0 z-10 flex justify-center"
       >
         <img
-          src="/assets/garland-top.webp"
+          src="https://media.invitestory.in/kalyana-mandapam/assets/garland-top.webp"
           alt=""
           className="anim-sway w-[135%] max-w-none select-none sm:w-full"
         />
@@ -78,13 +78,13 @@ export default function Hero() {
         >
           {/* temple mandap — behind the couple */}
           <img
-            src="/assets/mandap-footer.webp"
+            src="https://media.invitestory.in/kalyana-mandapam/assets/mandap-footer.webp"
             alt=""
             className="pointer-events-none absolute bottom-0 left-1/2 w-[128%] max-w-none -translate-x-1/2 select-none object-contain object-bottom"
           />
           {/* couple characters */}
           <img
-            src="/assets/couple.webp"
+            src="https://media.invitestory.in/kalyana-mandapam/assets/couple.webp"
             alt={`${wedding.bride} and ${wedding.groom}`}
             className="anim-float relative z-10 w-[58%] max-w-[250px] select-none object-contain"
           />

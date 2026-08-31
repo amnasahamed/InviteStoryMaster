@@ -17,7 +17,7 @@ function Person({
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
           style={{
-            backgroundImage: "url('/images/mandala-texture.jpg')",
+            backgroundImage: "url('https://media.invitestory.in/kerala-sands/images/mandala-texture.jpg')",
             backgroundSize: "cover",
           }}
         />
@@ -49,14 +49,14 @@ export function Couple() {
   return (
     <section className="relative overflow-hidden px-5 py-20">
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/kerala-sands/images/floral-corner.png"
         alt=""
         aria-hidden
         loading="lazy"
         className="pointer-events-none absolute -top-6 -left-10 w-44 opacity-40"
       />
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/kerala-sands/images/floral-corner.png"
         alt=""
         aria-hidden
         loading="lazy"

@@ -1,6 +1,6 @@
-import heroArch from "@/assets/hero-arch.jpg";
-import floral from "@/assets/floral-spray.png";
-import coupleImg from "@/assets/couple-walking.png";
+const heroArch = "https://media.invitestory.in/seashell-vows/src/assets/hero-arch.jpg";
+const floral = "https://media.invitestory.in/seashell-vows/src/assets/floral-spray.png";
+const coupleImg = "https://media.invitestory.in/seashell-vows/src/assets/couple-walking.png";
 import { PetalTap } from "./PetalTap";
 import { useParallax } from "@/hooks/use-reveal";
 import { couple } from "@/lib/wedding";

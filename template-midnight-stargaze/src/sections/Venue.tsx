@@ -70,7 +70,7 @@ export default function Venue() {
             ) : (
               <motion.img
                 key="photo"
-                src="/assets/venue-palace.webp"
+                src="https://media.invitestory.in/midnight-stargaze/assets/venue-palace.webp"
                 alt={`${wedding.venue.name} at night`}
                 className="h-64 w-full object-cover sm:h-72"
                 initial={{ opacity: 0, scale: 1.05 }}

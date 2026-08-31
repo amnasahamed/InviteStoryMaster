@@ -69,7 +69,7 @@ export default function CelebrationDock() {
               className="absolute"
             >
               <img
-                src="/op-coin.png"
+                src="https://media.invitestory.in/grand-line-voyage/op-coin.png"
                 alt=""
                 width={48}
                 height={48}

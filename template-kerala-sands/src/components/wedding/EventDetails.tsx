@@ -92,7 +92,7 @@ export function EventDetails() {
           <div className="border-gold/30 bg-card shadow-luxe mt-6 overflow-hidden rounded-[2rem] border">
             <div className="relative">
               <img
-                src="/images/map-preview.jpg"
+                src="https://media.invitestory.in/kerala-sands/images/map-preview.jpg"
                 alt={`Map to ${wedding.venue.name}`}
                 loading="lazy"
                 width={1024}

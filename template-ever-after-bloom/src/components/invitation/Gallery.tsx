@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
-import dancing from "@/assets/scene-dancing.jpg";
-import walking from "@/assets/scene-walking.jpg";
-import balcony from "@/assets/scene-balcony.jpg";
-import hands from "@/assets/scene-hands.jpg";
-import couple from "@/assets/couple-lanterns.png";
+const dancing = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-dancing.jpg";
+const walking = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-walking.jpg";
+const balcony = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-balcony.jpg";
+const hands = "https://media.invitestory.in/ever-after-bloom/src/assets/scene-hands.jpg";
+const couple = "https://media.invitestory.in/ever-after-bloom/src/assets/couple-lanterns.png";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 
 const plates = [

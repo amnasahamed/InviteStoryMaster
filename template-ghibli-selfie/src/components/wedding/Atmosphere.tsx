@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import cloudA from "@/assets/cloud-a.png";
+const cloudA = "https://media.invitestory.in/ghibli-selfie/src/assets/cloud-a.png";
 import { playChirp } from "./audio";
 import { burstPetals } from "./effects";
 

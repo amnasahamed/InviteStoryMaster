@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import petalImg from "@/assets/petal.png";
-import butterflyImg from "@/assets/butterfly.png";
+const petalImg = "https://media.invitestory.in/ghibli-selfie/src/assets/petal.png";
+const butterflyImg = "https://media.invitestory.in/ghibli-selfie/src/assets/butterfly.png";
 import { PETAL_EVENT, type PetalBurst } from "./effects";
 
 type Particle = {

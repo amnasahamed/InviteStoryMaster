@@ -5,8 +5,8 @@ import { wedding } from "../config";
 
 type Offset = { x: number; y: number };
 const LAYERS = {
-  hero: "./assets/hero-lakeview-teal-v1.png",
-  couple: "./assets/hero-couple-v2.png",
+  hero: ".https://media.invitestory.in/lakeview-lanterns/assets/hero-lakeview-teal-v1.png",
+  couple: ".https://media.invitestory.in/lakeview-lanterns/assets/hero-couple-v2.png",
 };
 
 function usePointerParallax() {

@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
-import lantern from "@/assets/lantern.png";
+const lantern = "https://media.invitestory.in/ever-after-bloom/src/assets/lantern.png";
 
 type Props = {
   count?: number;

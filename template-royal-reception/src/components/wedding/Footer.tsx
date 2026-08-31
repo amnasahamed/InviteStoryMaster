@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-royal-deep px-6 py-20 text-center">
       <img
-        src="/images/mandala-texture.jpg"
+        src="https://media.invitestory.in/royal-reception/images/mandala-texture.jpg"
         alt=""
         aria-hidden
         loading="lazy"
@@ -16,7 +16,7 @@ export function Footer() {
       <Aurora className="opacity-30 mix-blend-screen" />
       <div className="absolute inset-0 bg-gradient-to-b from-royal-deep/90 via-royal-deep/70 to-royal-deep" />
       <img
-        src="/images/lotus-cluster.png"
+        src="https://media.invitestory.in/royal-reception/images/lotus-cluster.png"
         alt=""
         aria-hidden
         loading="lazy"

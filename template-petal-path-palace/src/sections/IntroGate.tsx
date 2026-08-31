@@ -93,7 +93,7 @@ export default function IntroGate({
               }}
             />
             <img
-              src="./assets/layers/03-couple.png"
+              src=".https://media.invitestory.in/petal-path-palace/assets/layers/03-couple.png"
               alt=""
               className="relative h-32 w-auto object-contain sm:h-40"
               style={{ animation: "float-soft 5s ease-in-out infinite" }}

@@ -21,7 +21,7 @@ function Diya({ className = "", delay = 0 }: { className?: string; delay?: numbe
         }}
       />
       <img
-        src="/assets/diya.png"
+        src="https://media.invitestory.in/rajmahal-palace/assets/diya.png"
         alt=""
         className="relative w-24 drop-shadow-[0_10px_20px_rgba(0,0,0,0.55)] sm:w-28"
         style={{ animation: "diya-sway 5s ease-in-out infinite" }}
@@ -35,7 +35,7 @@ export default function Hero() {
     <section className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 py-20">
       {/* texture + aurora */}
       <img
-        src="/assets/hero-bg.png"
+        src="https://media.invitestory.in/rajmahal-palace/assets/hero-bg.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
@@ -44,7 +44,7 @@ export default function Hero() {
 
       {/* rotating mandala behind everything */}
       <img
-        src="/assets/mandala.png"
+        src="https://media.invitestory.in/rajmahal-palace/assets/mandala.png"
         alt=""
         className="pointer-events-none absolute top-1/2 w-[125vmin] max-w-none -translate-y-1/2 opacity-[0.14]"
         style={{ animation: "spin-slow 80s linear infinite" }}
@@ -71,7 +71,7 @@ export default function Hero() {
             }}
           />
           <img
-            src="/assets/ganesha.png"
+            src="https://media.invitestory.in/rajmahal-palace/assets/ganesha.png"
             alt="Lord Ganesha"
             className="relative w-36 drop-shadow-[0_0_25px_rgba(217,164,65,0.45)] sm:w-44"
             style={{ animation: "float-soft 7s ease-in-out infinite" }}

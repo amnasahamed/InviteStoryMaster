@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import gramophone from "@/assets/gramophone.png";
+const gramophone = "https://media.invitestory.in/ghibli-selfie/src/assets/gramophone.png";
 import { startMusic, stopMusic } from "./audio";
 
 /** Click-to-play gramophone. Never autoplays. */

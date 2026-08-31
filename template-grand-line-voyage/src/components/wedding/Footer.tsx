@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-ocean-deep px-5 pt-18 pb-14">
       {/* Background Deck Texture */}
       <img
-        src="/op-deck-texture.png"
+        src="https://media.invitestory.in/grand-line-voyage/op-deck-texture.png"
         alt=""
         width={1024}
         height={1024}
@@ -31,7 +31,7 @@ export default function Footer() {
           className="mx-auto inline-block"
         >
           <img
-            src="/op-coin.png"
+            src="https://media.invitestory.in/grand-line-voyage/op-coin.png"
             alt=""
             width={512}
             height={512}

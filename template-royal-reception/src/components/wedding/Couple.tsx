@@ -38,7 +38,7 @@ export function Couple() {
   return (
     <section className="relative overflow-hidden bg-ivory px-6 py-20">
       <img
-        src="/images/mandala-texture.jpg"
+        src="https://media.invitestory.in/royal-reception/images/mandala-texture.jpg"
         alt=""
         aria-hidden
         loading="lazy"
@@ -54,7 +54,7 @@ export function Couple() {
 
         <div className="mt-12 space-y-16">
           <Portrait
-            src="/images/bride.png"
+            src="https://media.invitestory.in/royal-reception/images/bride.png"
             name={wedding.bride.name}
             parents={wedding.bride.parents}
             note={wedding.bride.note}
@@ -66,7 +66,7 @@ export function Couple() {
             <span className="hairline-rule h-px w-16" />
           </Reveal>
           <Portrait
-            src="/images/groom.png"
+            src="https://media.invitestory.in/royal-reception/images/groom.png"
             name={wedding.groom.name}
             parents={wedding.groom.parents}
             note={wedding.groom.note}

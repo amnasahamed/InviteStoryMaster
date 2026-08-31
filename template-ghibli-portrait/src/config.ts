@@ -119,13 +119,13 @@ const config: InvitationConfig = {
   displayDate: "Saturday, December 12th, 2026",
   tagline: "Together since childhood.\nForever begins now.",
   hero: {
-    childhoodBride: "images/childhood-bride.png",
-    childhoodGroom: "images/childhood-groom.png",
-    portraitBride: "images/portrait-bride.png",
-    portraitGroom: "images/portrait-groom.png",
+    childhoodBride: "https://media.invitestory.in/ghibli-portrait/images/childhood-bride.png",
+    childhoodGroom: "https://media.invitestory.in/ghibli-portrait/images/childhood-groom.png",
+    portraitBride: "https://media.invitestory.in/ghibli-portrait/images/portrait-bride.png",
+    portraitGroom: "https://media.invitestory.in/ghibli-portrait/images/portrait-groom.png",
     /** Ghibli-style illustrated bodies holding empty frames */
-    bodyBride: "images/body-bride.png",
-    bodyGroom: "images/body-groom.png",
+    bodyBride: "https://media.invitestory.in/ghibli-portrait/images/body-bride.png",
+    bodyGroom: "https://media.invitestory.in/ghibli-portrait/images/body-groom.png",
   },
   story: [
     {
@@ -164,18 +164,18 @@ const config: InvitationConfig = {
     mapQuery: "Rosewood Garden Estate",
   },
   gallery: [
-    { src: "images/gallery-1.png", alt: "Golden hour walk through the garden" },
-    { src: "images/gallery-2.png", alt: "Dancing under the string lights" },
-    { src: "images/gallery-3.png", alt: "The ring — she said yes" },
-    { src: "images/gallery-4.png", alt: "Sunday coffee ritual" },
-    { src: "images/gallery-5.png", alt: "The proposal under the maple tree" },
-    { src: "images/gallery-6.png", alt: "Sparkler send-off dreams" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-1.png", alt: "Golden hour walk through the garden" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-2.png", alt: "Dancing under the string lights" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-3.png", alt: "The ring — she said yes" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-4.png", alt: "Sunday coffee ritual" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-5.png", alt: "The proposal under the maple tree" },
+    { src: "https://media.invitestory.in/ghibli-portrait/images/gallery-6.png", alt: "Sparkler send-off dreams" },
   ],
   families: {
     bride: {
       label: "The Bride's Family",
       title: "The Bennetts",
-      photo: "images/family-bride.png",
+      photo: "https://media.invitestory.in/ghibli-portrait/images/family-bride.png",
       members: [
         { name: "Eleanor Bennett", relation: "Mother of the Bride" },
         { name: "Thomas Bennett", relation: "Father of the Bride" },
@@ -185,7 +185,7 @@ const config: InvitationConfig = {
     groom: {
       label: "The Groom's Family",
       title: "The Coles",
-      photo: "images/family-groom.png",
+      photo: "https://media.invitestory.in/ghibli-portrait/images/family-groom.png",
       members: [
         { name: "Margaret Cole", relation: "Mother of the Groom" },
         { name: "Henry Cole", relation: "Father of the Groom" },

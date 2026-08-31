@@ -20,7 +20,7 @@ export default function Couple() {
             }}
           />
           <img
-            src="/assets/couple.png"
+            src="https://media.invitestory.in/rajmahal-palace/assets/couple.png"
             alt={`${wedding.brideFull} and ${wedding.groomFull}`}
             className="relative w-72 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] sm:w-80"
             style={{ animation: "float-soft 6s ease-in-out infinite" }}

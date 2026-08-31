@@ -9,7 +9,7 @@ export function Footer() {
       <div
         className="pointer-events-none absolute inset-0 opacity-25"
         style={{
-          backgroundImage: "url('/images/mandala-texture.jpg')",
+          backgroundImage: "url('https://media.invitestory.in/kerala-sands/images/mandala-texture.jpg')",
           backgroundSize: "120%",
           backgroundPosition: "top center",
         }}
@@ -18,14 +18,14 @@ export function Footer() {
       <div className="from-emerald-ink/70 via-emerald-ink/85 to-emerald-ink absolute inset-0 bg-gradient-to-b" />
 
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/kerala-sands/images/floral-corner.png"
         alt=""
         aria-hidden
         loading="lazy"
         className="pointer-events-none absolute -top-4 -left-8 w-36 opacity-30"
       />
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/kerala-sands/images/floral-corner.png"
         alt=""
         aria-hidden
         loading="lazy"

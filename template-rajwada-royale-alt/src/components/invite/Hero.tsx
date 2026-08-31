@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useEffect, useState, lazy, Suspense } from "react";
 import { ChevronDown } from "lucide-react";
-import couple from "@/assets/couple.png";
-import floral from "@/assets/floral-corner.png";
-import lantern from "@/assets/lantern.png";
+const couple = "https://media.invitestory.in/rajwada-royale-alt/src/assets/couple.png";
+const floral = "https://media.invitestory.in/rajwada-royale-alt/src/assets/floral-corner.png";
+const lantern = "https://media.invitestory.in/rajwada-royale-alt/src/assets/lantern.png";
 import { invitation } from "@/config/invitation";
 
 const Aurora = lazy(() => import("@/components/Aurora"));

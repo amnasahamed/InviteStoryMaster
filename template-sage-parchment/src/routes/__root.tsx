@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Surya and Jayesh cordially invite you to celebrate their engagement on September 4, 2026 at SN Auditorium Olari, Thrissur, Kerala.",
       },
-      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image", content: "https://media.invitestory.in/sage-parchment/og-image.jpg" },
       { property: "og:image:alt", content: "Surya & Jayesh Engagement Invitation" },
       { property: "og:url", content: "/" },
       { property: "og:site_name", content: "Surya & Jayesh Engagement" },
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Surya and Jayesh cordially invite you to celebrate their engagement on September 4, 2026 at SN Auditorium Olari, Thrissur, Kerala.",
       },
-      { name: "twitter:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "https://media.invitestory.in/sage-parchment/og-image.jpg" },
     ],
     links: [
       {

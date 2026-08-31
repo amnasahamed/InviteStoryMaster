@@ -42,8 +42,8 @@ export const wedding = {
   },
 
   intro: {
-    videoSrc: "./assets/video/intro.mp4",
-    posterSrc: "./assets/video/poster.png",
+    videoSrc: ".https://media.invitestory.in/ganesha-gopuram/assets/video/intro.mp4",
+    posterSrc: ".https://media.invitestory.in/ganesha-gopuram/assets/video/poster.png",
     focusHint: "Tap to enter",
     skipLabel: "Skip",
     musicEnabled: false,

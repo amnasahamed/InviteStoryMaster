@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="glass-twilight mt-12 w-full max-w-sm overflow-hidden rounded-t-[11rem] rounded-b-3xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-[#dfb141]/50 transition-transform duration-500 hover:scale-[1.02]">
           <div className="overflow-hidden rounded-t-[10.5rem] rounded-b-2xl border border-[#dfb141]/40">
             <img
-              src="/assets/royal-couple.jpg"
+              src="https://media.invitestory.in/lake-pichola-royal/assets/royal-couple.jpg"
               alt="Royal Portrait of Aarav & Ananya at Lake Pichola"
               className="w-full object-cover brightness-95 transition-transform duration-700 hover:scale-105"
             />

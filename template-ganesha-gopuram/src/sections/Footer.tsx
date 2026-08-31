@@ -21,7 +21,7 @@ export default function Footer() {
     <footer className="relative flex min-h-[70svh] flex-col justify-end overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-ivory-paper via-ivory-warm to-[#E6D5B8]" />
       <img
-        src="./assets/layers/layer-01-backdrop.png"
+        src=".https://media.invitestory.in/ganesha-gopuram/assets/layers/layer-01-backdrop.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-50"
       />

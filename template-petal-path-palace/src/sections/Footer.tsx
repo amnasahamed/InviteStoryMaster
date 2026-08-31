@@ -22,7 +22,7 @@ export default function Footer() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 top-10 opacity-[0.12]">
         <img
-          src="./assets/layers/03-couple.png"
+          src=".https://media.invitestory.in/petal-path-palace/assets/layers/03-couple.png"
           alt=""
           className="mx-auto h-full max-w-md object-contain object-bottom"
         />

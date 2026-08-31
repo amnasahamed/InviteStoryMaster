@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { invite } from "@/lib/invite.config";
-import heroFlatlay from "@/assets/hero-flatlay.jpg";
-import jasmine from "@/assets/jasmine-strand.png";
+const heroFlatlay = "https://media.invitestory.in/toran-telugu/src/assets/hero-flatlay.jpg";
+const jasmine = "https://media.invitestory.in/toran-telugu/src/assets/jasmine-strand.png";
 import { PetalField } from "./PetalField";
 import { AuroraGlow } from "./AuroraGlow";
 import { Ornament } from "./Ornament";

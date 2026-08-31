@@ -40,7 +40,7 @@ export function Hero() {
       <Petals count={12} />
 
       <motion.img
-        src="/images/garland.png"
+        src="https://media.invitestory.in/kerala-sands/images/garland.png"
         alt=""
         aria-hidden
         style={{ y: garlandY }}
@@ -102,7 +102,7 @@ export function Hero() {
         </motion.div>
 
         <motion.img
-          src="/images/couple-hero.png"
+          src="https://media.invitestory.in/kerala-sands/images/couple-hero.png"
           alt="Watercolour illustration of the couple"
           width={1024}
           height={1408}

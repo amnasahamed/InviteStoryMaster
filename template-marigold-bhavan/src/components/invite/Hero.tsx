@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useTransform } from "motion/react";
 import { useCallback, useRef, useState } from "react";
-import couple from "@/assets/couple.png";
+const couple = "https://media.invitestory.in/marigold-bhavan/src/assets/couple.png";
 import { invite } from "@/config/invite";
 import { useParallax } from "@/hooks/use-parallax";
 import { getLenis } from "@/lib/lenis";

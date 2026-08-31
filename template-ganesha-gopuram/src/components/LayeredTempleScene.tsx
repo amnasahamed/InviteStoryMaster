@@ -12,10 +12,10 @@ import { wedding } from "../config";
 type Offset = { x: number; y: number };
 
 const LAYERS = {
-  backdrop: "./assets/layers/layer-01-backdrop.png",
-  toran: "./assets/layers/layer-02-toran.png",
-  props: "./assets/layers/layer-03-props.png",
-  frame: "./assets/layers/layer-04-gold-frame.png",
+  backdrop: ".https://media.invitestory.in/ganesha-gopuram/assets/layers/layer-01-backdrop.png",
+  toran: ".https://media.invitestory.in/ganesha-gopuram/assets/layers/layer-02-toran.png",
+  props: ".https://media.invitestory.in/ganesha-gopuram/assets/layers/layer-03-props.png",
+  frame: ".https://media.invitestory.in/ganesha-gopuram/assets/layers/layer-04-gold-frame.png",
   butterflies: "./assets/layers/butterflies-sprite.png",
   ganesha: "./assets/layers/ganesha-icon.png",
 };

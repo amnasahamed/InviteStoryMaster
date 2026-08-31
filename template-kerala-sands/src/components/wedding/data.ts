@@ -4,14 +4,14 @@ export const wedding = {
     fullName: "Aarav Menon",
     line: "Son of Mr. Ramesh & Mrs. Latha Menon",
     note: "An architect who sketches temples on café napkins and believes every good story starts with chai.",
-    image: "/images/groom.png",
+    image: "https://media.invitestory.in/kerala-sands/images/groom.png",
   },
   bride: {
     name: "Diya",
     fullName: "Diya Nair",
     line: "Daughter of Mr. Suresh & Mrs. Anjali Nair",
     note: "A Bharatanatyam dancer and pediatrician who hums old Malayalam songs while she works.",
-    image: "/images/bride.png",
+    image: "https://media.invitestory.in/kerala-sands/images/bride.png",
   },
   // 10 December 2026, 6:30 PM IST
   dateISO: "2026-12-10T18:30:00+05:30",

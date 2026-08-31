@@ -51,7 +51,7 @@ export default function InvitationOpener() {
               <motion.div className="diya-aura pointer-events-none absolute h-36 w-36 rounded-full" animate={phase === "lit" ? { scale: [0.5, 2.4], opacity: [0, .9, .15] } : { scale: 1, opacity: .08 }} transition={{ duration: 1.15, ease: "easeOut" }} />
 
               <button ref={buttonRef} type="button" onClick={lightInvitation} className="diya-button group relative z-10 flex h-64 w-[22rem] items-center justify-center sm:h-80 sm:w-[31rem]" aria-label={`Light the lamp and open ${wedding.groom} and ${wedding.bride}'s invitation`}>
-                <motion.img src="./assets/opener-diya-v1.png" alt="An unlit handcrafted brass lamp" className="absolute w-full select-none mix-blend-screen transition-transform duration-700 group-hover:scale-[1.025]" draggable={false} animate={phase === "lit" ? { scale: 1.035, filter: "brightness(1.18) saturate(1.1)" } : { scale: 1, filter: "brightness(.82) saturate(.78)" }} />
+                <motion.img src=".https://media.invitestory.in/lakeview-lanterns/assets/opener-diya-v1.png" alt="An unlit handcrafted brass lamp" className="absolute w-full select-none mix-blend-screen transition-transform duration-700 group-hover:scale-[1.025]" draggable={false} animate={phase === "lit" ? { scale: 1.035, filter: "brightness(1.18) saturate(1.1)" } : { scale: 1, filter: "brightness(.82) saturate(.78)" }} />
                 <motion.span className="diya-flame absolute top-[25%] sm:top-[24%]" initial={{ opacity: 0, scale: .2, y: 10 }} animate={phase === "lit" ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: .2, y: 10 }} transition={{ duration: .55, ease: [0.34, 1.56, 0.64, 1] }} />
               </button>
             </div>

@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ChevronDown } from "lucide-react";
-import heroPalace from "@/assets/hero-palace.jpg";
-import bougainvillea from "@/assets/bougainvillea.png";
+const heroPalace = "https://media.invitestory.in/ever-after-bloom/src/assets/hero-palace.jpg";
+const bougainvillea = "https://media.invitestory.in/ever-after-bloom/src/assets/bougainvillea.png";
 import { LanternField } from "./LanternField";
 import { Petals } from "./Petals";
 import { invitation } from "@/content/invitation";

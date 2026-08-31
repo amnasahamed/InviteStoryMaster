@@ -19,7 +19,7 @@ export function Hero() {
       <Aurora className="opacity-70" />
       <div className="absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-b from-transparent via-royal/70 to-royal-deep" />
       <img
-        src="/images/swirl-band.png"
+        src="https://media.invitestory.in/royal-reception/images/swirl-band.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-[14%] w-full opacity-60 mix-blend-multiply"
@@ -40,7 +40,7 @@ export function Hero() {
       </motion.div>
 
       <motion.img
-        src="/images/couple-hero.png"
+        src="https://media.invitestory.in/royal-reception/images/couple-hero.png"
         alt={`Illustration of ${wedding.bride.name} and ${wedding.groom.name}`}
         width={1024}
         height={1280}
@@ -52,7 +52,7 @@ export function Hero() {
       />
 
       <img
-        src="/images/lotus-cluster.png"
+        src="https://media.invitestory.in/royal-reception/images/lotus-cluster.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-[38%] z-[15] w-full"
@@ -60,13 +60,13 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0 z-[16] h-[38%] bg-gradient-to-b from-royal via-royal to-royal-deep" />
 
       <motion.img
-        src="/images/butterfly.png"
+        src="https://media.invitestory.in/royal-reception/images/butterfly.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute left-6 top-[34%] z-20 w-12 animate-float-slow opacity-90"
       />
       <motion.img
-        src="/images/butterfly.png"
+        src="https://media.invitestory.in/royal-reception/images/butterfly.png"
         alt=""
         aria-hidden
         style={{ animationDelay: "-3s" }}

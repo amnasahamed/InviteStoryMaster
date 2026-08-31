@@ -13,7 +13,7 @@ type Lantern = {
   launched?: boolean;
 };
 
-const SPRITE = "./assets/layers/lantern-sprite.png";
+const SPRITE = ".https://media.invitestory.in/lakeview-lanterns/assets/layers/lantern-sprite.png";
 
 function makeAmbient(count: number): Lantern[] {
   return Array.from({ length: count }, (_, i) => {

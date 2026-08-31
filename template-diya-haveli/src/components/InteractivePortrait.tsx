@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import handsImage from "@/assets/wedding-hands.jpg";
+const handsImage = "https://media.invitestory.in/diya-haveli/src/assets/wedding-hands.jpg";
 
 export function InteractivePortrait() {
   const frame = useRef<HTMLElement>(null);

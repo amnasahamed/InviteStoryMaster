@@ -47,7 +47,7 @@ export default function InviteMessage() {
           {wedding.verse.hindi}
         </span>
         <motion.img
-          src="/assets/mandala.png"
+          src="https://media.invitestory.in/midnight-stargaze/assets/mandala.png"
           alt=""
           className="w-16 opacity-70"
           whileInView={{ rotate: 360 }}

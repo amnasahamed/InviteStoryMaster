@@ -1,4 +1,4 @@
-import lotus from "@/assets/lotus.png";
+const lotus = "https://media.invitestory.in/sage-parchment/src/assets/lotus.png";
 
 const PETALS = Array.from({ length: 8 }, (_, i) => ({
   left: (i * 13 + (i % 3) * 4) % 94,

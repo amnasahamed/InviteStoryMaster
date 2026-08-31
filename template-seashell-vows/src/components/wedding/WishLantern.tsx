@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import lantern from "@/assets/watercolor-lantern.png";
-import lanterns from "@/assets/lantern-constellation.png";
+const lantern = "https://media.invitestory.in/seashell-vows/src/assets/watercolor-lantern.png";
+const lanterns = "https://media.invitestory.in/seashell-vows/src/assets/lantern-constellation.png";
 
 type ReleasedLantern = {
   id: number;

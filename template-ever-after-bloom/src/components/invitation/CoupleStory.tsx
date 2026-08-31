@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import bride from "@/assets/portrait-bride.jpg";
-import groom from "@/assets/portrait-groom.jpg";
+const bride = "https://media.invitestory.in/ever-after-bloom/src/assets/portrait-bride.jpg";
+const groom = "https://media.invitestory.in/ever-after-bloom/src/assets/portrait-groom.jpg";
 import { invitation } from "@/content/invitation";
 import { Ornament, Reveal, SectionTitle } from "./Reveal";
 

@@ -15,7 +15,7 @@ export function Hero() {
       <Petals />
 
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/floral-corner.png"
         alt=""
         aria-hidden
         width={1024}
@@ -23,7 +23,7 @@ export function Hero() {
         className="pointer-events-none absolute -left-20 -top-16 w-64 rotate-[-8deg] opacity-80 sm:w-80"
       />
       <img
-        src="/images/floral-corner.png"
+        src="https://media.invitestory.in/noor-e-zahra/images/floral-corner.png"
         alt=""
         aria-hidden
         width={1024}

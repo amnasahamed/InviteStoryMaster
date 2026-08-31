@@ -51,7 +51,7 @@ export function Countdown() {
   return (
     <section className="relative overflow-hidden bg-royal-deep px-6 py-16">
       <img
-        src="/images/mandala-texture.jpg"
+        src="https://media.invitestory.in/royal-reception/images/mandala-texture.jpg"
         alt=""
         aria-hidden
         loading="lazy"

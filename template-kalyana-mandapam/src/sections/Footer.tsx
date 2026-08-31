@@ -67,14 +67,14 @@ export default function Footer() {
 
         {/* mandap — static transparent PNG */}
         <img
-          src="/assets/mandap-footer.webp"
+          src="https://media.invitestory.in/kalyana-mandapam/assets/mandap-footer.webp"
           alt=""
           className="absolute bottom-0 left-1/2 w-[128%] max-w-none -translate-x-1/2 select-none object-contain object-bottom sm:w-[105%]"
         />
 
         {/* couple standing in front of the mandap */}
         <img
-          src="/assets/couple.webp"
+          src="https://media.invitestory.in/kalyana-mandapam/assets/couple.webp"
           alt={`${wedding.bride} and ${wedding.groom}`}
           className="anim-float relative bottom-0 z-10 w-[68%] max-w-[330px] select-none object-contain"
         />

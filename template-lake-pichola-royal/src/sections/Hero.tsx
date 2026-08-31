@@ -35,7 +35,7 @@ export default function Hero({ onExplore }: HeroProps) {
         }}
       >
         <img
-          src="/assets/hero_twilight.jpg"
+          src="https://media.invitestory.in/lake-pichola-royal/assets/hero_twilight.jpg"
           alt="Lake Pichola Udaipur Palace at Twilight"
           className="h-full w-full object-cover brightness-[0.55] contrast-[115%]"
         />

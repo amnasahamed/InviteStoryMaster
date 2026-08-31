@@ -2,9 +2,9 @@ import { useState } from "react";
 import { couple } from "@/lib/wedding";
 import { useParallax } from "@/hooks/use-reveal";
 import footerWash from "@/assets/footer-wash.jpg";
-import floral from "@/assets/floral-spray.png";
-import lantern from "@/assets/watercolor-lantern.png";
-import lanterns from "@/assets/lantern-constellation.png";
+const floral = "https://media.invitestory.in/seashell-vows/src/assets/floral-spray.png";
+const lantern = "https://media.invitestory.in/seashell-vows/src/assets/watercolor-lantern.png";
+const lanterns = "https://media.invitestory.in/seashell-vows/src/assets/lantern-constellation.png";
 
 export function WeddingFooter() {
   const drift = useParallax(0.18);

@@ -53,7 +53,7 @@ export function Countdown() {
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('/images/mandala-texture.jpg')",
+          backgroundImage: "url('https://media.invitestory.in/kerala-sands/images/mandala-texture.jpg')",
           backgroundSize: "140%",
           backgroundPosition: "center",
         }}

@@ -1,5 +1,5 @@
-import mosque from "@/assets/mosque.png";
-import cloudA from "@/assets/cloud-a.png";
+const mosque = "https://media.invitestory.in/ghibli-selfie/src/assets/mosque.png";
+const cloudA = "https://media.invitestory.in/ghibli-selfie/src/assets/cloud-a.png";
 import { useReveal } from "./useReveal";
 
 const MAPS_URL =

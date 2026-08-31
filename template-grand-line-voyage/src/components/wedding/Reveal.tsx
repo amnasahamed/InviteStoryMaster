@@ -49,7 +49,7 @@ export function SectionTitle({
       <div className="mx-auto mt-3.5 flex items-center justify-center gap-3">
         <span className="h-[1.5px] w-12 bg-gradient-to-r from-transparent via-gold to-gold/80 rounded-full" />
         <img
-          src="/op-coin.png"
+          src="https://media.invitestory.in/grand-line-voyage/op-coin.png"
           alt=""
           width={24}
           height={24}

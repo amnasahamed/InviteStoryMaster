@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import footerFloral from "@/assets/footer-floral.jpg";
+const footerFloral = "https://media.invitestory.in/rajwada-royale-alt/src/assets/footer-floral.jpg";
 import { invitation } from "@/config/invitation";
 
 export function FooterBlessing() {

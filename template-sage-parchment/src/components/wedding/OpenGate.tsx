@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import jaali from "@/assets/jaali.jpg";
-import gatePanel from "@/assets/gate-panel.jpg";
+const gatePanel = "https://media.invitestory.in/sage-parchment/src/assets/gate-panel.jpg";
 import { invitation } from "@/config/invitation";
 
 const OpenedContext = createContext(false);

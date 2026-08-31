@@ -9,12 +9,12 @@ import {
 import { wedding } from "../config";
 
 const LAYERS = {
-  sky: "./assets/layers/05-sky-palace.png",
-  garden: "./assets/layers/04-garden-guests.png",
-  couple: "./assets/layers/03-couple.png",
-  foreground: "./assets/layers/02-foreground-guests.png",
-  arch: "./assets/layers/01-arch-frame.png",
-  full: "./assets/layers/source-full.png",
+  sky: ".https://media.invitestory.in/petal-path-palace/assets/layers/05-sky-palace.png",
+  garden: ".https://media.invitestory.in/petal-path-palace/assets/layers/04-garden-guests.png",
+  couple: ".https://media.invitestory.in/petal-path-palace/assets/layers/03-couple.png",
+  foreground: ".https://media.invitestory.in/petal-path-palace/assets/layers/02-foreground-guests.png",
+  arch: ".https://media.invitestory.in/petal-path-palace/assets/layers/01-arch-frame.png",
+  full: ".https://media.invitestory.in/petal-path-palace/assets/layers/source-full.png",
 } as const;
 
 export default function ParallaxStage({ active }: { active: boolean }) {

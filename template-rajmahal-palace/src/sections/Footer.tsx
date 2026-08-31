@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="relative flex min-h-[80svh] flex-col justify-end overflow-hidden">
       {/* background texture */}
       <img
-        src="/assets/hero-bg.png"
+        src="https://media.invitestory.in/rajmahal-palace/assets/hero-bg.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-70"
       />
@@ -39,7 +39,7 @@ export default function Footer() {
 
       {/* closing message */}
       <Reveal className="relative z-10 mx-auto mb-14 mt-4 flex max-w-sm flex-col items-center gap-4 px-6 text-center">
-        <img src="/assets/mandala.png" alt="" className="w-14 opacity-80" />
+        <img src="https://media.invitestory.in/rajmahal-palace/assets/mandala.png" alt="" className="w-14 opacity-80" />
         <p className="font-script text-gold text-4xl leading-snug">
           We can't wait to celebrate with you
         </p>
@@ -62,7 +62,7 @@ export default function Footer() {
 
       {/* static garland overlay — hangs over the footer top */}
       <img
-        src="/assets/footer-garland.png"
+        src="https://media.invitestory.in/rajmahal-palace/assets/footer-garland.png"
         alt=""
         className="pointer-events-none absolute left-1/2 top-0 z-20 w-[150%] max-w-none -translate-x-1/2 sm:w-full"
       />

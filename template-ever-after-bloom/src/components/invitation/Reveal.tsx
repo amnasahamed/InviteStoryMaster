@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
-import flourish from "@/assets/gold-flourish.png";
+const flourish = "https://media.invitestory.in/ever-after-bloom/src/assets/gold-flourish.png";
 
 /** Scroll-reveal wrapper used by every section so the page turns like pages. */
 export function Reveal({

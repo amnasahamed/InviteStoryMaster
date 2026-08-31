@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import seal from "@/assets/invite-seal.png";
-import video from "@/assets/invite-open.mp4";
+const seal = "https://media.invitestory.in/ever-after-bloom/src/assets/invite-seal.png";
+const video = "https://media.invitestory.in/ever-after-bloom/src/assets/invite-open.mp4";
 
 /** Frame of the film where the envelope is fully open and we cross into the site. */
 const FADE_AT = 7.15;

@@ -10,7 +10,7 @@ export default function FamilyCard() {
     <section className="relative px-6 py-16">
       <Reveal className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-gold-antique/30 shadow-soft">
         <img
-          src="./assets/layers/family-welcome-card.png"
+          src=".https://media.invitestory.in/ganesha-gopuram/assets/layers/family-welcome-card.png"
           alt={`${wedding.familyName} family welcomes you`}
           className="h-auto w-full object-cover"
           loading="lazy"

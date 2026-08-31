@@ -1,5 +1,5 @@
 import { Navigation } from "lucide-react";
-import mapPreview from "@/assets/map-preview.jpg";
+const mapPreview = "https://media.invitestory.in/sage-parchment/src/assets/map-preview.jpg";
 import { invitation } from "@/config/invitation";
 import { directionsUrl, mapsUrl } from "@/lib/wedding";
 import { Reveal } from "./Reveal";
